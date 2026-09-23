@@ -394,9 +394,60 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 @media (max-width:620px){.hero img.hero-seal{width:48px;height:48px;right:14px;top:14px}}
 @media print{.brand-bar,.brand-foot{background:#202422 !important}}
 
+
+/* ---- portada legible ---- */
+.hero-veil{background:linear-gradient(180deg,rgba(14,20,17,.10) 0%,rgba(14,20,17,.34) 32%,rgba(14,20,17,.82) 62%,rgba(14,20,17,.94) 100%)}
+.hero-body .eyebrow{color:var(--on-deep-2)}
+.hero h1,.hero-sub{text-shadow:0 1px 18px rgba(0,0,0,.35)}
+.hero img.hero-seal{display:none}
+.hero-photos{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(247,244,238,.12);color:var(--on-deep);border:1px solid rgba(247,244,238,.45);border-radius:2px;padding:9px 14px;font:600 .82rem/1 var(--font-sans,"Montserrat",sans-serif);letter-spacing:.04em;cursor:pointer}
+.hero-photos:hover{background:rgba(247,244,238,.2)}
+@media (max-width:719px){
+  .hero{display:block;min-height:0;position:relative}
+  .hero picture{display:block}
+  .hero picture>img,.hero>img{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;min-height:0}
+  .hero-veil{display:none}
+  .hero-body{background:var(--deep);padding-block:24px 28px;position:static}
+  .hero h1,.hero-sub{text-shadow:none}
+  .hero-photos{position:absolute;right:12px;top:calc(75vw - 52px);margin:0;background:rgba(32,36,34,.78);border-color:rgba(247,244,238,.35)}
+}
+/* ---- galeria ---- */
+.shot{margin:0}
+.shot img,.section-photo img{cursor:zoom-in}
+@media (max-width:859px){
+  .gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .gallery .shot{flex:0 0 86%;scroll-snap-align:start}
+}
+/* ---- visor ---- */
+.lb{border:0;padding:0;margin:0;width:100vw;height:100vh;max-width:none;max-height:none;background:#121614;color:#F7F4EE}
+.lb::backdrop{background:rgba(0,0,0,.6)}
+.lb-in{height:100%;display:grid;grid-template-rows:auto 1fr auto;padding:calc(10px + env(safe-area-inset-top,0px)) 12px calc(12px + env(safe-area-inset-bottom,0px))}
+.lb-top{display:flex;justify-content:space-between;align-items:center;font:500 .85rem var(--font-sans,"Montserrat",sans-serif);color:#D9D3C6}
+.lb-x,.lb-nav{background:none;border:1px solid rgba(247,244,238,.3);color:#F7F4EE;border-radius:2px;cursor:pointer;font:600 1rem/1 var(--font-sans,"Montserrat",sans-serif);padding:10px 14px}
+.lb-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:0}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(32,36,34,.6)}
+.lb-prev{left:4px}.lb-next{right:4px}
+.lb-foot{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding-top:10px}
+.lb-cap{font:400 .9rem/1.45 var(--font-sans,"Montserrat",sans-serif);color:#D9D3C6;max-width:60ch}
+.lb-ask{background:var(--btn,#C5A059);color:var(--btn-ink,#202422);text-decoration:none;font:600 .85rem/1 var(--font-sans,"Montserrat",sans-serif);padding:12px 16px;border-radius:2px;white-space:nowrap}
+/* ---- barra de contacto fija ---- */
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#202422;border-top:2px solid var(--oro,#C5A059);transform:translateY(110%);transition:transform .25s ease;padding-bottom:env(safe-area-inset-bottom,0px)}
+.stick.on{transform:none}
+.stick .wrap{display:flex;align-items:center;gap:14px;padding-block:10px}
+.stick .p{font-family:"Playfair Display",Georgia,serif;font-weight:600;color:#F7F4EE;font-size:1.08rem;line-height:1.15;font-variant-numeric:tabular-nums}
+.stick .l{display:block;font:500 .74rem/1.3 "Montserrat",sans-serif;color:#A9B3AB;letter-spacing:.03em}
+.stick .who{font:500 .78rem/1.3 "Montserrat",sans-serif;color:#A9B3AB;margin-left:auto}
+.stick .go{margin-left:auto;background:var(--oro,#C5A059);color:#202422;text-decoration:none;font:600 .92rem/1 "Montserrat",sans-serif;padding:14px 18px;border-radius:2px;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
+.stick .who+.go{margin-left:0}
+@media (max-width:719px){.stick .who{display:none}}
+body.has-stick{padding-bottom:72px}
+@media (prefers-reduced-motion:reduce){.stick{transition:none}}
+@media print{.stick,.lb,.hero-photos{display:none!important}}
+
 </style>
 </head>
-<body>
+<body data-code="[HT-CIM]" data-wa="573004903639" data-finca="la finca de 500 ha en Cimitarra">
 <header class="brand-bar">
   <div class="wrap">
     <a href="../../" aria-label="Hierro &amp; Tierra, portafolio">
@@ -407,7 +458,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
   </div>
 </header>
 <header class="hero">
-  <picture><source type="image/webp" srcset="img/portada-900.webp 900w, img/portada-1600.webp 1600w" sizes="100vw"><img src="img/portada-1600.jpg" srcset="img/portada-900.jpg 900w, img/portada-1600.jpg 1600w" sizes="100vw" width="1600" height="900" fetchpriority="high" loading="eager" alt="Potrero plano de pasto parejo con monte al fondo y cielo despejado"></picture>
+  <picture><source type="image/webp" srcset="img/portada-900.webp 900w, img/portada-1600.webp 1600w" sizes="100vw"><img src="img/portada-1600.jpg" srcset="img/portada-900.jpg 900w, img/portada-1600.jpg 1600w" sizes="100vw" width="1600" height="900" fetchpriority="high" loading="eager" data-full="img/portada-1600.jpg" alt="Potrero plano de pasto parejo con monte al fondo y cielo despejado"></picture>
   <img class="hero-seal" src="img/ht-logo-256.png" width="64" height="64" alt="">
   <div class="hero-veil"></div>
   <div class="hero-body">
@@ -415,6 +466,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
       <p class="eyebrow">Cimitarra, Santander &middot; Magdalena Medio, sobre la Ruta del Sol</p>
       <h1>500 hectáreas planas, con vegas del río Carare</h1>
       <p class="hero-sub">Para cría, levante y ceba, o para agricultura. Casa principal, casa de mayordomo, corral techado y báscula. Sobre la vía principal. $30 millones por hectárea.</p>
+      <button class="hero-photos" type="button">Ver fotos</button>
     </div>
   </div>
 </header>
@@ -447,7 +499,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
         <div class="price">
           <b class="num">$15.000.000.000</b>
           <span class="num">$30.000.000 por hectárea</span>
-          <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20vi%20la%20finca%20de%20500%20ha%20en%20Cimitarra%2C%20sobre%20la%20Ruta%20del%20Sol.%20%C2%BFPodemos%20cuadrar%20una%20visita%3F" target="_blank" rel="noopener">Preguntar por la finca &rarr;</a>
+          <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20vi%20la%20finca%20de%20500%20ha%20en%20Cimitarra%2C%20sobre%20la%20Ruta%20del%20Sol.%20%C2%BFPodemos%20cuadrar%20una%20visita%3F%20%5BHT-CIM%5D" target="_blank" rel="noopener">Preguntar por la finca &rarr;</a>
         </div>
       </article>
     </div>
@@ -477,15 +529,15 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
     </div>
     <div class="gallery">
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/potrero-ganado-480.webp 480w, img/potrero-ganado-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-ganado-900.jpg" srcset="img/potrero-ganado-480.jpg 480w, img/potrero-ganado-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" alt="Potrero plano de pasto parejo; al fondo, reses pastando junto a un techado con cerca de madera"></picture>
+        <picture><source type="image/webp" srcset="img/potrero-ganado-480.webp 480w, img/potrero-ganado-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-ganado-900.jpg" srcset="img/potrero-ganado-480.jpg 480w, img/potrero-ganado-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/potrero-ganado-900.jpg" alt="Potrero plano de pasto parejo; al fondo, reses pastando junto a un techado con cerca de madera"></picture>
         <figcaption>Potrero plano; al fondo, ganado y un techado con cerca de madera.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/potrero-sombrio-480.webp 480w, img/potrero-sombrio-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-sombrio-900.jpg" srcset="img/potrero-sombrio-480.jpg 480w, img/potrero-sombrio-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" alt="Potrero con árboles de sombrío dispersos y cerca de alambre en primer plano"></picture>
+        <picture><source type="image/webp" srcset="img/potrero-sombrio-480.webp 480w, img/potrero-sombrio-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-sombrio-900.jpg" srcset="img/potrero-sombrio-480.jpg 480w, img/potrero-sombrio-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/potrero-sombrio-900.jpg" alt="Potrero con árboles de sombrío dispersos y cerca de alambre en primer plano"></picture>
         <figcaption>Potrero con árboles de sombrío.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/potrero-cerca-480.webp 480w, img/potrero-cerca-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-cerca-900.jpg" srcset="img/potrero-cerca-480.jpg 480w, img/potrero-cerca-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="507" loading="lazy" decoding="async" alt="Potrero de pasto parejo cercado en poste y alambre, con monte al fondo"></picture>
+        <picture><source type="image/webp" srcset="img/potrero-cerca-480.webp 480w, img/potrero-cerca-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-cerca-900.jpg" srcset="img/potrero-cerca-480.jpg 480w, img/potrero-cerca-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="507" loading="lazy" decoding="async" data-full="img/potrero-cerca-900.jpg" alt="Potrero de pasto parejo cercado en poste y alambre, con monte al fondo"></picture>
         <figcaption>Potrero parejo, cercado en poste y alambre.</figcaption>
       </figure>
     </div>
@@ -514,15 +566,15 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
     </div>
     <div class="gallery">
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/cano-480.webp 480w, img/cano-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/cano-900.jpg" srcset="img/cano-480.jpg 480w, img/cano-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" alt="Caño de agua entre potrero y monte, con cerca de alambre en primer plano"></picture>
+        <picture><source type="image/webp" srcset="img/cano-480.webp 480w, img/cano-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/cano-900.jpg" srcset="img/cano-480.jpg 480w, img/cano-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" data-full="img/cano-900.jpg" alt="Caño de agua entre potrero y monte, con cerca de alambre en primer plano"></picture>
         <figcaption>El caño, visto desde el puente.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/puente-480.webp 480w, img/puente-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/puente-900.jpg" srcset="img/puente-480.jpg 480w, img/puente-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" alt="Puente de madera sobre el caño, con tranquera al fondo y empedrado a la entrada"></picture>
+        <picture><source type="image/webp" srcset="img/puente-480.webp 480w, img/puente-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/puente-900.jpg" srcset="img/puente-480.jpg 480w, img/puente-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" data-full="img/puente-900.jpg" alt="Puente de madera sobre el caño, con tranquera al fondo y empedrado a la entrada"></picture>
         <figcaption>Puente de madera sobre el caño, con tranquera.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/agua-potrero-480.webp 480w, img/agua-potrero-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/agua-potrero-900.jpg" srcset="img/agua-potrero-480.jpg 480w, img/agua-potrero-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" alt="Agua con buchón a orillas de un potrero cercado en poste y alambre"></picture>
+        <picture><source type="image/webp" srcset="img/agua-potrero-480.webp 480w, img/agua-potrero-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/agua-potrero-900.jpg" srcset="img/agua-potrero-480.jpg 480w, img/agua-potrero-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" data-full="img/agua-potrero-900.jpg" alt="Agua con buchón a orillas de un potrero cercado en poste y alambre"></picture>
         <figcaption>Agua con buchón a orillas del potrero.</figcaption>
       </figure>
     </div>
@@ -576,27 +628,27 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
     </div>
     <div class="gallery">
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/llanura-alto-480.webp 480w, img/llanura-alto-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/llanura-alto-900.jpg" srcset="img/llanura-alto-480.jpg 480w, img/llanura-alto-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" alt="Llanura de potreros con árboles dispersos, vista desde un alto, con cordillera al fondo"></picture>
+        <picture><source type="image/webp" srcset="img/llanura-alto-480.webp 480w, img/llanura-alto-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/llanura-alto-900.jpg" srcset="img/llanura-alto-480.jpg 480w, img/llanura-alto-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/llanura-alto-900.jpg" alt="Llanura de potreros con árboles dispersos, vista desde un alto, con cordillera al fondo"></picture>
         <figcaption>La llanura vista desde un alto, con la cordillera al fondo.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/vista-potreros-480.webp 480w, img/vista-potreros-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/vista-potreros-900.jpg" srcset="img/vista-potreros-480.jpg 480w, img/vista-potreros-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" alt="Potreros planos rodeados de monte, vistos desde un alto con camino de tierra en primer plano"></picture>
+        <picture><source type="image/webp" srcset="img/vista-potreros-480.webp 480w, img/vista-potreros-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/vista-potreros-900.jpg" srcset="img/vista-potreros-480.jpg 480w, img/vista-potreros-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/vista-potreros-900.jpg" alt="Potreros planos rodeados de monte, vistos desde un alto con camino de tierra en primer plano"></picture>
         <figcaption>Potreros planos y monte, vistos desde un alto.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/arbol-sombrio-480.webp 480w, img/arbol-sombrio-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/arbol-sombrio-900.jpg" srcset="img/arbol-sombrio-480.jpg 480w, img/arbol-sombrio-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" alt="Árboles grandes de sombrío en medio de un potrero"></picture>
+        <picture><source type="image/webp" srcset="img/arbol-sombrio-480.webp 480w, img/arbol-sombrio-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/arbol-sombrio-900.jpg" srcset="img/arbol-sombrio-480.jpg 480w, img/arbol-sombrio-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" data-full="img/arbol-sombrio-900.jpg" alt="Árboles grandes de sombrío en medio de un potrero"></picture>
         <figcaption>Árboles grandes de sombrío en el potrero.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/potrero-monte-480.webp 480w, img/potrero-monte-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-monte-900.jpg" srcset="img/potrero-monte-480.jpg 480w, img/potrero-monte-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" alt="Potrero de pasto verde que llega hasta el borde del monte"></picture>
+        <picture><source type="image/webp" srcset="img/potrero-monte-480.webp 480w, img/potrero-monte-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-monte-900.jpg" srcset="img/potrero-monte-480.jpg 480w, img/potrero-monte-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/potrero-monte-900.jpg" alt="Potrero de pasto verde que llega hasta el borde del monte"></picture>
         <figcaption>Potrero contra el monte.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/caballo-480.webp 480w, img/caballo-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/caballo-900.jpg" srcset="img/caballo-480.jpg 480w, img/caballo-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1603" loading="lazy" decoding="async" alt="Caballo bayo bajo árboles de sombrío, con rastrojo en primer plano"></picture>
+        <picture><source type="image/webp" srcset="img/caballo-480.webp 480w, img/caballo-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/caballo-900.jpg" srcset="img/caballo-480.jpg 480w, img/caballo-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1603" loading="lazy" decoding="async" data-full="img/caballo-900.jpg" alt="Caballo bayo bajo árboles de sombrío, con rastrojo en primer plano"></picture>
         <figcaption>Caballo bajo el sombrío.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/camino-alto-480.webp 480w, img/camino-alto-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/camino-alto-900.jpg" srcset="img/camino-alto-480.jpg 480w, img/camino-alto-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" alt="Camino empedrado que sube entre monte y cerca de alambre"></picture>
+        <picture><source type="image/webp" srcset="img/camino-alto-480.webp 480w, img/camino-alto-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/camino-alto-900.jpg" srcset="img/camino-alto-480.jpg 480w, img/camino-alto-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/camino-alto-900.jpg" alt="Camino empedrado que sube entre monte y cerca de alambre"></picture>
         <figcaption>Camino empedrado que sube al alto.</figcaption>
       </figure>
     </div>
@@ -636,7 +688,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 
     <div class="narrow">
       <div class="cta">
-        <a class="btn btn-main" href="https://wa.me/573004903639?text=Hola%2C%20vi%20la%20finca%20de%20500%20ha%20en%20Cimitarra%2C%20sobre%20la%20Ruta%20del%20Sol%2C%20y%20quiero%20cuadrar%20una%20visita." target="_blank" rel="noopener">Cuadrar visita por WhatsApp</a>
+        <a class="btn btn-main" href="https://wa.me/573004903639?text=Hola%2C%20vi%20la%20finca%20de%20500%20ha%20en%20Cimitarra%2C%20sobre%20la%20Ruta%20del%20Sol%2C%20y%20quiero%20cuadrar%20una%20visita.%20%5BHT-CIM%5D" target="_blank" rel="noopener">Cuadrar visita por WhatsApp</a>
       </div>
       <p class="small" style="margin-top:14px">+57 300 490 3639 &nbsp;·&nbsp; Le atiende <b style="color:var(--on-deep)">George Marroquin</b>.</p>
     </div>
@@ -674,5 +726,51 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
     <p class="brand-meta">Le atiende George Marroquin<br><a href="https://wa.me/573004903639">WhatsApp +57 300 490 3639</a><br><a href="../../">Ver todas las fincas</a></p>
   </div>
 </footer>
+<div class="stick" aria-label="Contacto rápido">
+  <div class="wrap">
+    <div><span class="p">$30 M / ha</span><span class="l">500 ha · Cimitarra</span></div>
+    <span class="who">Le atiende George Marroquin</span>
+    <a class="go" href="https://wa.me/573004903639?text=Hola%2C%20vi%20la%20finca%20de%20500%20ha%20en%20Cimitarra%2C%20sobre%20la%20Ruta%20del%20Sol%2C%20y%20quiero%20cuadrar%20una%20visita.%20%5BHT-CIM%5D" target="_blank" rel="noopener">Cuadrar visita</a>
+  </div>
+</div>
+<dialog class="lb" aria-label="Fotos">
+  <div class="lb-in">
+    <div class="lb-top"><span class="lb-n">1 / 1</span><button class="lb-x" type="button" aria-label="Cerrar">Cerrar ✕</button></div>
+    <div class="lb-stage"><button class="lb-nav lb-prev" type="button" aria-label="Foto anterior">‹</button><img alt=""><button class="lb-nav lb-next" type="button" aria-label="Foto siguiente">›</button></div>
+    <div class="lb-foot"><p class="lb-cap"></p><a class="lb-ask" href="#" target="_blank" rel="noopener">Preguntar por esta foto</a></div>
+  </div>
+</dialog>
+<script>
+(function(){
+  var d=document, code=d.body.getAttribute('data-code')||'', wa=d.body.getAttribute('data-wa')||'', finca=d.body.getAttribute('data-finca')||'';
+  // --- barra fija
+  var st=d.querySelector('.stick'), hero=d.querySelector('.hero'), con=d.getElementById('contacto')||d.querySelector('.contact');
+  if(st&&'IntersectionObserver' in window){
+    d.body.classList.add('has-stick');
+    var pastHero=false, atContact=false;
+    function upd(){st.classList.toggle('on',pastHero&&!atContact);}
+    if(hero) new IntersectionObserver(function(e){pastHero=!e[0].isIntersecting;upd();}).observe(hero);
+    if(con) new IntersectionObserver(function(e){atContact=e[0].isIntersecting;upd();},{threshold:0.15}).observe(con);
+  }
+  // --- visor
+  var imgs=[].slice.call(d.querySelectorAll('.hero picture img, .hero>img:not(.hero-seal), figure img'));
+  var items=imgs.map(function(im){var f=im.closest('figure');var cap=f&&f.querySelector('figcaption');
+    return {src:im.getAttribute('data-full')||im.currentSrc||im.src, alt:im.alt||'', cap:cap?cap.textContent.trim():(im.alt||'')};});
+  var btn=d.querySelector('.hero-photos'); if(btn){ if(items.length>1){btn.textContent='Ver las '+items.length+' fotos';} else {btn.hidden=true;} }
+  var lb=d.querySelector('.lb'); if(!lb||!items.length||typeof lb.showModal!=='function') return;
+  var li=lb.querySelector('img'), lc=lb.querySelector('.lb-cap'), ln=lb.querySelector('.lb-n'), la=lb.querySelector('.lb-ask'), i=0;
+  function show(k){i=(k+items.length)%items.length;var it=items[i];li.src=it.src;li.alt=it.alt;lc.textContent=it.cap;ln.textContent=(i+1)+' / '+items.length;
+    if(la&&wa){la.href='https://wa.me/'+wa+'?text='+encodeURIComponent('Hola, vi la foto "'+it.cap+'" de '+finca+'. Quiero preguntar por esto. '+code);}}
+  function open(k){show(k);lb.showModal();}
+  imgs.forEach(function(im,k){ if(im.closest('.hero')) return; im.addEventListener('click',function(){open(k);}); });
+  if(btn) btn.addEventListener('click',function(){open(0);});
+  lb.querySelector('.lb-x').addEventListener('click',function(){lb.close();});
+  lb.querySelector('.lb-prev').addEventListener('click',function(){show(i-1);});
+  lb.querySelector('.lb-next').addEventListener('click',function(){show(i+1);});
+  lb.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1);});
+  var x0=null; lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)show(i+(dx<0?1:-1));x0=null;});
+})();
+</script>
 </body>
 </html>

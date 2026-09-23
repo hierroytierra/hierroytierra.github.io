@@ -382,9 +382,60 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 @media (max-width:620px){.hero img.hero-seal{width:48px;height:48px;right:14px;top:14px}}
 @media print{.brand-bar,.brand-foot{background:#202422 !important}}
 
+
+/* ---- portada legible ---- */
+.hero-veil{background:linear-gradient(180deg,rgba(14,20,17,.10) 0%,rgba(14,20,17,.34) 32%,rgba(14,20,17,.82) 62%,rgba(14,20,17,.94) 100%)}
+.hero-body .eyebrow{color:var(--on-deep-2)}
+.hero h1,.hero-sub{text-shadow:0 1px 18px rgba(0,0,0,.35)}
+.hero img.hero-seal{display:none}
+.hero-photos{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(247,244,238,.12);color:var(--on-deep);border:1px solid rgba(247,244,238,.45);border-radius:2px;padding:9px 14px;font:600 .82rem/1 var(--font-sans,"Montserrat",sans-serif);letter-spacing:.04em;cursor:pointer}
+.hero-photos:hover{background:rgba(247,244,238,.2)}
+@media (max-width:719px){
+  .hero{display:block;min-height:0;position:relative}
+  .hero picture{display:block}
+  .hero picture>img,.hero>img{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;min-height:0}
+  .hero-veil{display:none}
+  .hero-body{background:var(--deep);padding-block:24px 28px;position:static}
+  .hero h1,.hero-sub{text-shadow:none}
+  .hero-photos{position:absolute;right:12px;top:calc(75vw - 52px);margin:0;background:rgba(32,36,34,.78);border-color:rgba(247,244,238,.35)}
+}
+/* ---- galeria ---- */
+.shot{margin:0}
+.shot img,.section-photo img{cursor:zoom-in}
+@media (max-width:859px){
+  .gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .gallery .shot{flex:0 0 86%;scroll-snap-align:start}
+}
+/* ---- visor ---- */
+.lb{border:0;padding:0;margin:0;width:100vw;height:100vh;max-width:none;max-height:none;background:#121614;color:#F7F4EE}
+.lb::backdrop{background:rgba(0,0,0,.6)}
+.lb-in{height:100%;display:grid;grid-template-rows:auto 1fr auto;padding:calc(10px + env(safe-area-inset-top,0px)) 12px calc(12px + env(safe-area-inset-bottom,0px))}
+.lb-top{display:flex;justify-content:space-between;align-items:center;font:500 .85rem var(--font-sans,"Montserrat",sans-serif);color:#D9D3C6}
+.lb-x,.lb-nav{background:none;border:1px solid rgba(247,244,238,.3);color:#F7F4EE;border-radius:2px;cursor:pointer;font:600 1rem/1 var(--font-sans,"Montserrat",sans-serif);padding:10px 14px}
+.lb-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:0}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(32,36,34,.6)}
+.lb-prev{left:4px}.lb-next{right:4px}
+.lb-foot{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding-top:10px}
+.lb-cap{font:400 .9rem/1.45 var(--font-sans,"Montserrat",sans-serif);color:#D9D3C6;max-width:60ch}
+.lb-ask{background:var(--btn,#C5A059);color:var(--btn-ink,#202422);text-decoration:none;font:600 .85rem/1 var(--font-sans,"Montserrat",sans-serif);padding:12px 16px;border-radius:2px;white-space:nowrap}
+/* ---- barra de contacto fija ---- */
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#202422;border-top:2px solid var(--oro,#C5A059);transform:translateY(110%);transition:transform .25s ease;padding-bottom:env(safe-area-inset-bottom,0px)}
+.stick.on{transform:none}
+.stick .wrap{display:flex;align-items:center;gap:14px;padding-block:10px}
+.stick .p{font-family:"Playfair Display",Georgia,serif;font-weight:600;color:#F7F4EE;font-size:1.08rem;line-height:1.15;font-variant-numeric:tabular-nums}
+.stick .l{display:block;font:500 .74rem/1.3 "Montserrat",sans-serif;color:#A9B3AB;letter-spacing:.03em}
+.stick .who{font:500 .78rem/1.3 "Montserrat",sans-serif;color:#A9B3AB;margin-left:auto}
+.stick .go{margin-left:auto;background:var(--oro,#C5A059);color:#202422;text-decoration:none;font:600 .92rem/1 "Montserrat",sans-serif;padding:14px 18px;border-radius:2px;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
+.stick .who+.go{margin-left:0}
+@media (max-width:719px){.stick .who{display:none}}
+body.has-stick{padding-bottom:72px}
+@media (prefers-reduced-motion:reduce){.stick{transition:none}}
+@media print{.stick,.lb,.hero-photos{display:none!important}}
+
 </style>
 </head>
-<body>
+<body data-code="[HT-LLG]" data-wa="573004903639" data-finca="los lotes de Cabeceras de Llanogrande">
 <header class="brand-bar">
   <div class="wrap">
     <a href="../../" aria-label="Hierro &amp; Tierra, portafolio">
@@ -396,7 +447,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 </header>
 <!-- ═══════════════ PORTADA ═══════════════ -->
 <header class="hero">
-  <picture><source type="image/webp" srcset="img/foto1-900.webp 900w, img/foto1-1600.webp 1600w" sizes="100vw"><img src="img/foto1-1600.jpg" srcset="img/foto1-900.jpg 900w, img/foto1-1600.jpg 1600w" sizes="100vw" width="1600" height="535" fetchpriority="high" loading="eager" alt="Potrero abierto con ganado, guaduales y casas campestres al fondo, en el altiplano del Oriente antioqueño"></picture>
+  <picture><source type="image/webp" srcset="img/foto1-900.webp 900w, img/foto1-1600.webp 1600w" sizes="100vw"><img src="img/foto1-1600.jpg" srcset="img/foto1-900.jpg 900w, img/foto1-1600.jpg 1600w" sizes="100vw" width="1600" height="535" fetchpriority="high" loading="eager" data-full="img/foto1-1600.jpg" alt="Potrero abierto con ganado, guaduales y casas campestres al fondo, en el altiplano del Oriente antioqueño"></picture>
   <img class="hero-seal" src="img/ht-logo-256.png" width="64" height="64" alt="">
   <div class="hero-veil"></div>
   <div class="hero-body">
@@ -404,6 +455,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
       <p class="eyebrow">Vereda Cabeceras &middot; Rionegro, Antioquia</p>
       <h1>Dos lotes en Cabeceras de Llanogrande</h1>
       <p class="hero-sub">Dos lotes contiguos con matrícula propia: 7.222 m² por $1.805 millones y 18.623 m² por $3.724 millones. A 4 km del Mall Llanogrande, en la misma vereda del Colegio Montessori.</p>
+      <button class="hero-photos" type="button">Ver fotos</button>
     </div>
   </div>
 </header>
@@ -438,7 +490,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
         <div class="price">
           <b class="num">$1.805.500.000</b>
           <span class="num">$250.000 por m&sup2;</span>
-          <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesa%20el%20lote%2014%20%287.222%20m%C2%B2%29%20en%20Cabeceras%20de%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F" target="_blank" rel="noopener">Preguntar por el lote 14 &rarr;</a>
+          <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesa%20el%20lote%2014%20%287.222%20m%C2%B2%29%20en%20Cabeceras%20de%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F%20%5BHT-LLG%5D" target="_blank" rel="noopener">Preguntar por el lote 14 &rarr;</a>
         </div>
       </article>
 
@@ -453,7 +505,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
         <div class="price">
           <b class="num">$3.724.600.000</b>
           <span class="num">$200.000 por m&sup2;</span>
-          <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesa%20el%20lote%2013%20%2818.623%20m%C2%B2%29%20en%20Cabeceras%20de%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F" target="_blank" rel="noopener">Preguntar por el lote 13 &rarr;</a>
+          <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesa%20el%20lote%2013%20%2818.623%20m%C2%B2%29%20en%20Cabeceras%20de%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F%20%5BHT-LLG%5D" target="_blank" rel="noopener">Preguntar por el lote 13 &rarr;</a>
         </div>
       </article>
     </div>
@@ -462,7 +514,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
       <div class="stack-sm t-left" style="gap:6px">
         <h3>Los dos juntos &mdash; 25.845 m&sup2;</h3>
         <p class="small" style="color:var(--ink-2)">Un solo cuerpo de tierra continuo, un solo propietario y una sola negociación. Tamaño para hasta cuatro casas, según norma.</p>
-        <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesan%20los%20dos%20lotes%20%2825.845%20m%C2%B2%29%20en%20Cabeceras%20de%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F" target="_blank" rel="noopener">Preguntar por los dos lotes &rarr;</a>
+        <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesan%20los%20dos%20lotes%20%2825.845%20m%C2%B2%29%20en%20Cabeceras%20de%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F%20%5BHT-LLG%5D" target="_blank" rel="noopener">Preguntar por los dos lotes &rarr;</a>
       </div>
       <div class="t-right">
         <p class="t-price num">$5.250.000.000</p>
@@ -585,15 +637,15 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 
     <div class="gallery">
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/foto2-480.webp 480w, img/foto2-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/foto2-900.jpg" srcset="img/foto2-480.jpg 480w, img/foto2-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="708" loading="lazy" decoding="async" alt="Pradera abierta con &aacute;rboles de corteza clara en el lindero y monta&ntilde;as al fondo"></picture>
+        <picture><source type="image/webp" srcset="img/foto2-480.webp 480w, img/foto2-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/foto2-900.jpg" srcset="img/foto2-480.jpg 480w, img/foto2-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="708" loading="lazy" decoding="async" data-full="img/foto2-900.jpg" alt="Pradera abierta con &aacute;rboles de corteza clara en el lindero y monta&ntilde;as al fondo"></picture>
         <figcaption>Pradera abierta, &aacute;rboles de corteza clara en el lindero y las monta&ntilde;as del altiplano al fondo.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/foto3-480.webp 480w, img/foto3-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/foto3-900.jpg" srcset="img/foto3-480.jpg 480w, img/foto3-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="768" loading="lazy" decoding="async" alt="Potrero con una colina al fondo coronada de palmas y casas campestres"></picture>
+        <picture><source type="image/webp" srcset="img/foto3-480.webp 480w, img/foto3-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/foto3-900.jpg" srcset="img/foto3-480.jpg 480w, img/foto3-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="768" loading="lazy" decoding="async" data-full="img/foto3-900.jpg" alt="Potrero con una colina al fondo coronada de palmas y casas campestres"></picture>
         <figcaption>La colina vecina, coronada de palmas y casas campestres. Es el est&aacute;ndar del sector.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/foto4-480.webp 480w, img/foto4-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/foto4-900.jpg" srcset="img/foto4-480.jpg 480w, img/foto4-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="720" loading="lazy" decoding="async" alt="Potrero cercado con hilera de cipreses y setos de casas vecinas"></picture>
+        <picture><source type="image/webp" srcset="img/foto4-480.webp 480w, img/foto4-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/foto4-900.jpg" srcset="img/foto4-480.jpg 480w, img/foto4-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="720" loading="lazy" decoding="async" data-full="img/foto4-900.jpg" alt="Potrero cercado con hilera de cipreses y setos de casas vecinas"></picture>
         <figcaption>Lindero cercado, con los cipreses y setos de las casas vecinas al fondo.</figcaption>
       </figure>
     </div>
@@ -660,7 +712,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
       <h2>Le recorremos el lote cuando quiera</h2>
       <p class="lede">La visita toma una ma&ntilde;ana. Vamos con los linderos, el plano y los documentos en mano, y desde el lote se ven el arbolado, los vecinos y la v&iacute;a de acceso.</p>
       <div class="cta">
-        <a class="btn btn-main" href="https://wa.me/573004903639?text=Hola%2C%20vi%20la%20informaci%C3%B3n%20de%20los%20lotes%20en%20Cabeceras%20de%20Llanogrande%20y%20quiero%20agendar%20una%20visita." target="_blank" rel="noopener">Agendar visita por WhatsApp</a>
+        <a class="btn btn-main" href="https://wa.me/573004903639?text=Hola%2C%20vi%20la%20informaci%C3%B3n%20de%20los%20lotes%20en%20Cabeceras%20de%20Llanogrande%20y%20quiero%20agendar%20una%20visita.%20%5BHT-LLG%5D" target="_blank" rel="noopener">Agendar visita por WhatsApp</a>
       </div>
       <p class="small" style="margin-top:4px">+57 300 490 3639 &nbsp;·&nbsp; Le atiende <b style="color:var(--on-deep)">George Marroquin</b>, corredor con mandato del propietario.</p>
     </div>
@@ -702,5 +754,51 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
     <p class="brand-meta">Le atiende George Marroquin<br><a href="https://wa.me/573004903639">WhatsApp +57 300 490 3639</a><br><a href="../../">Ver todas las fincas</a></p>
   </div>
 </footer>
+<div class="stick" aria-label="Contacto rápido">
+  <div class="wrap">
+    <div><span class="p">Desde $1.805 M</span><span class="l">Lotes en Llanogrande · Rionegro</span></div>
+    <span class="who">Le atiende George Marroquin</span>
+    <a class="go" href="https://wa.me/573004903639?text=Hola%2C%20vi%20los%20lotes%20de%20Cabeceras%20de%20Llanogrande%20y%20quiero%20cuadrar%20una%20visita.%20%5BHT-LLG%5D" target="_blank" rel="noopener">Cuadrar visita</a>
+  </div>
+</div>
+<dialog class="lb" aria-label="Fotos">
+  <div class="lb-in">
+    <div class="lb-top"><span class="lb-n">1 / 1</span><button class="lb-x" type="button" aria-label="Cerrar">Cerrar ✕</button></div>
+    <div class="lb-stage"><button class="lb-nav lb-prev" type="button" aria-label="Foto anterior">‹</button><img alt=""><button class="lb-nav lb-next" type="button" aria-label="Foto siguiente">›</button></div>
+    <div class="lb-foot"><p class="lb-cap"></p><a class="lb-ask" href="#" target="_blank" rel="noopener">Preguntar por esta foto</a></div>
+  </div>
+</dialog>
+<script>
+(function(){
+  var d=document, code=d.body.getAttribute('data-code')||'', wa=d.body.getAttribute('data-wa')||'', finca=d.body.getAttribute('data-finca')||'';
+  // --- barra fija
+  var st=d.querySelector('.stick'), hero=d.querySelector('.hero'), con=d.getElementById('contacto')||d.querySelector('.contact');
+  if(st&&'IntersectionObserver' in window){
+    d.body.classList.add('has-stick');
+    var pastHero=false, atContact=false;
+    function upd(){st.classList.toggle('on',pastHero&&!atContact);}
+    if(hero) new IntersectionObserver(function(e){pastHero=!e[0].isIntersecting;upd();}).observe(hero);
+    if(con) new IntersectionObserver(function(e){atContact=e[0].isIntersecting;upd();},{threshold:0.15}).observe(con);
+  }
+  // --- visor
+  var imgs=[].slice.call(d.querySelectorAll('.hero picture img, .hero>img:not(.hero-seal), figure img'));
+  var items=imgs.map(function(im){var f=im.closest('figure');var cap=f&&f.querySelector('figcaption');
+    return {src:im.getAttribute('data-full')||im.currentSrc||im.src, alt:im.alt||'', cap:cap?cap.textContent.trim():(im.alt||'')};});
+  var btn=d.querySelector('.hero-photos'); if(btn){ if(items.length>1){btn.textContent='Ver las '+items.length+' fotos';} else {btn.hidden=true;} }
+  var lb=d.querySelector('.lb'); if(!lb||!items.length||typeof lb.showModal!=='function') return;
+  var li=lb.querySelector('img'), lc=lb.querySelector('.lb-cap'), ln=lb.querySelector('.lb-n'), la=lb.querySelector('.lb-ask'), i=0;
+  function show(k){i=(k+items.length)%items.length;var it=items[i];li.src=it.src;li.alt=it.alt;lc.textContent=it.cap;ln.textContent=(i+1)+' / '+items.length;
+    if(la&&wa){la.href='https://wa.me/'+wa+'?text='+encodeURIComponent('Hola, vi la foto "'+it.cap+'" de '+finca+'. Quiero preguntar por esto. '+code);}}
+  function open(k){show(k);lb.showModal();}
+  imgs.forEach(function(im,k){ if(im.closest('.hero')) return; im.addEventListener('click',function(){open(k);}); });
+  if(btn) btn.addEventListener('click',function(){open(0);});
+  lb.querySelector('.lb-x').addEventListener('click',function(){lb.close();});
+  lb.querySelector('.lb-prev').addEventListener('click',function(){show(i-1);});
+  lb.querySelector('.lb-next').addEventListener('click',function(){show(i+1);});
+  lb.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1);});
+  var x0=null; lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)show(i+(dx<0?1:-1));x0=null;});
+})();
+</script>
 </body>
 </html>
