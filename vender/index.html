@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Fincas ganaderas en venta · Magdalena Medio · Hierro &amp; Tierra</title>
-<meta name="description" content="Fincas ganaderas en venta con ficha completa: área, carga, aguas, pastos, corrales, casas y precio. Se coordina visita por WhatsApp.">
+<title>Venda su finca ganadera · Hierro &amp; Tierra</title>
+<meta name="description" content="Venta privada de fincas ganaderas en Colombia: sin publicar ubicación ni su nombre, compradores filtrados, papeles revisados antes de mostrar y acompañamiento hasta la escritura.">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CO">
-<meta property="og:title" content="Fincas ganaderas en venta">
-<meta property="og:description" content="Puerto Boyacá, Puerto Salgar y Cimitarra. Ficha completa de cada finca y visita por WhatsApp.">
-<meta property="og:image" content="https://hierroytierra.github.io/img/og-cover.jpg">
+<meta property="og:title" content="Venda su finca ganadera sin exponerla · Hierro &amp; Tierra">
+<meta property="og:description" content="Venta privada: sin ubicación ni nombre publicados, solo compradores filtrados, papeles revisados primero.">
+<meta property="og:image" content="https://hierroytierra.github.io/vender/img/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://hierroytierra.github.io/">
+<meta property="og:url" content="https://hierroytierra.github.io/vender/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="64x64" href="img/ht-logo-64.png">
 <link rel="apple-touch-icon" sizes="180x180" href="img/ht-logo-180.png">
@@ -304,26 +304,6 @@ section{padding-block:clamp(52px,7vw,88px)}
   .together .t-right{margin-left:0;text-align:left}
 }
 
-
-.cat-head{background:var(--deep);color:var(--on-deep);padding-block:clamp(56px,9vw,110px) clamp(36px,5vw,60px)}
-.cat-head .eyebrow{color:var(--deep-accent)}
-.cat-head h1{color:var(--on-deep);max-width:20ch}
-.cat-head .lede{color:var(--on-deep-2);max-width:52ch;margin-top:14px}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:6px}
-.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:3px;overflow:hidden;box-shadow:var(--shadow);color:inherit;text-decoration:none;transition:transform .16s ease}
-.card:hover{transform:translateY(-2px)}
-.card img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block}
-.card-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
-.card h2{font-size:1.35rem}
-.card-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:4px}
-.card-facts b{display:block;font-family:"Spectral",Georgia,serif;font-size:1.15rem;font-weight:600}
-.card-facts span{display:block;font-size:.74rem;color:var(--muted);letter-spacing:.03em}
-.card-cta{margin-top:auto;padding-top:14px;border-top:1px solid var(--line-soft);font-weight:600;color:var(--pasto);font-size:.92rem}
-.card-tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-@media (max-width:760px){.cards{grid-template-columns:1fr}}
-.sell{display:flex;flex-wrap:wrap;gap:22px 40px;align-items:center;justify-content:space-between}
-.sell .stack-sm{max-width:620px}
-
 /* ===== Hierro & Tierra — tokens de marca (sobrescriben base.css) ===== */
 :root{
   --paper:#F7F4EE;          /* arena */
@@ -404,82 +384,153 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 @media (max-width:620px){.hero img.hero-seal{width:48px;height:48px;right:14px;top:14px}}
 @media print{.brand-bar,.brand-foot{background:#202422 !important}}
 
+
+.v-head{background:var(--deep);color:var(--on-deep);padding-block:clamp(52px,8vw,96px) clamp(40px,6vw,64px)}
+.v-head .eyebrow{color:var(--oro)}
+.v-head h1{color:var(--on-deep);max-width:16ch;margin-top:10px}
+.v-head .lede{color:var(--on-deep-2);max-width:54ch;margin-top:16px}
+.v-cta{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;margin-top:26px}
+.v-cta .alt{color:var(--on-deep);font-weight:600;font-size:.92rem}
+.v-cta .alt:hover{color:var(--oro)}
+.comp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.comp article{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:20px 22px;display:flex;flex-direction:column;gap:8px}
+.comp h3{font-size:1.12rem}
+.comp p{color:var(--ink-2);font-size:.95rem}
+.comp .k{font:600 .72rem/1 "Montserrat",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--oxido)}
+.comp article:last-child:nth-child(odd){grid-column:1/-1}
+@media (max-width:760px){.comp{grid-template-columns:1fr}}
+.no{background:var(--raise);border-radius:3px;padding:18px 22px;color:var(--ink-2);font-size:.95rem}
+.no b{color:var(--ink)}
+.pasos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;counter-reset:p}
+.pasos li{background:var(--card);padding:20px 18px;display:flex;flex-direction:column;gap:6px;counter-increment:p}
+.pasos li::before{content:counter(p);font:600 1.6rem/1 "Playfair Display",Georgia,serif;color:var(--oxido)}
+.pasos b{font-family:"Playfair Display",Georgia,serif;font-size:1.05rem}
+.pasos p{font-size:.9rem;color:var(--ink-2)}
+@media (max-width:860px){.pasos{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.pasos{grid-template-columns:1fr}}
+.quien{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:3px;padding:20px 22px}
+.quien .big{font:600 2.2rem/1 "Playfair Display",Georgia,serif;color:var(--oxido);font-variant-numeric:tabular-nums}
+.quien p{color:var(--ink-2)}
+.form{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+.form .full{grid-column:1/-1}
+.form label{display:flex;flex-direction:column;gap:6px;font:600 .8rem/1.3 "Montserrat",sans-serif;color:var(--ink)}
+.form input,.form select{font:400 1rem/1.3 "Montserrat",sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:12px;min-height:46px;width:100%}
+.form input:focus,.form select:focus{outline:2px solid var(--oro);outline-offset:1px}
+.form .check{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:.85rem;color:var(--ink-2)}
+.form .check input{width:20px;min-height:20px;height:20px;margin-top:2px;flex:0 0 auto}
+.form button{justify-self:start;border:0;cursor:pointer}
+.form .msg{font-size:.85rem;color:var(--oxido)}
+@media (max-width:620px){.form{grid-template-columns:1fr}}
+.faq{display:grid;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:14px 18px}
+.faq summary{cursor:pointer;font:600 1rem/1.4 "Playfair Display",Georgia,serif;color:var(--ink);list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--oxido);font-family:"Montserrat",sans-serif}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:10px;color:var(--ink-2);font-size:.95rem}
+
 </style>
 </head>
-<body>
+<body data-wa="573004903639" data-code="[HT-VENDER]">
 <header class="brand-bar">
   <div class="wrap">
-    <a href="./" aria-label="Hierro &amp; Tierra, portafolio">
+    <a href="../" aria-label="Hierro &amp; Tierra, portafolio">
       <img src="img/ht-logo-256.png" width="44" height="44" alt="Monograma H&amp;T de Hierro &amp; Tierra">
       <span><span class="brand-name">Hierro &amp; Tierra</span><span class="brand-sub" style="display:block">Trading &amp; Activos Rurales</span></span>
     </a>
-    <a class="brand-right" href="vender/">Vender mi finca</a>
+    <a class="brand-right" href="../vender/">Vender mi finca</a>
   </div>
 </header>
-<header class="cat-head">
+
+<header class="v-head">
   <div class="wrap">
-    <p class="eyebrow">Portafolio &middot; Colombia</p>
-    <h1>Fincas ganaderas en venta</h1>
-    <p class="lede">Cada finca tiene su p&aacute;gina con &aacute;rea, aguas, pastos, corrales, casas, acceso y precio. Toque la que le interese y, si le sirve, cuadramos la visita por WhatsApp.</p>
+    <p class="eyebrow">Para dueños de fincas ganaderas</p>
+    <h1>Venda su finca ganadera sin exponerla</h1>
+    <p class="lede">Venta privada por WhatsApp. No publicamos la ubicación exacta ni su nombre, y a su finca solo llegan compradores que ya pasaron nuestro filtro.</p>
+    <div class="v-cta">
+      <a class="btn btn-main" href="https://wa.me/573004903639?text=Hola%2C%20tengo%20una%20finca%20ganadera%20y%20quiero%20venderla%20con%20Hierro%20%26%20Tierra.%20%C2%BFPodemos%20hablar%3F%20%5BHT-VENDER%5D" target="_blank" rel="noopener">Hablar con George por WhatsApp</a>
+      <a class="alt" href="#formulario">O déjenos sus datos y lo llamamos &rarr;</a>
+    </div>
   </div>
 </header>
+
 <section>
   <div class="wrap stack">
-    <div class="cards">
-      <a class="card" href="fincas/puerto-boyaca/">
-        <picture><source type="image/webp" srcset="img/finca-1.webp"><img src="img/finca-1.jpg" width="1200" height="750" loading="eager" alt="Lomas de pasto con palma y sombrío en Puerto Boyacá"></picture>
-        <div class="card-body">
-          <span class="card-tag">Puerto Boyac&aacute; &middot; Magdalena Medio</span>
-          <h2>Finca ganadera de 510 hect&aacute;reas, finca montada</h2>
-          <p class="small" style="color:var(--ink-2)">Carga 1.100 animales en el a&ntilde;o en angleton y brachiaria. Dos quebradas, jag&uuml;eyes, corrales, b&aacute;scula propia y cinco casas.</p>
-          <div class="card-facts"><div><b class="num">510 ha</b><span>&Aacute;rea</span></div><div><b class="num">1.100</b><span>Animales en el a&ntilde;o</span></div><div><b class="num">$30 M/ha</b><span>Precio</span></div></div>
-          <span class="card-cta">Ver la finca &rarr;</span>
-        </div>
-      </a>
-      <a class="card" href="fincas/puerto-salgar/">
-        <picture><source type="image/webp" srcset="img/finca-2.webp"><img src="img/finca-2.jpg" width="1200" height="750" loading="eager" alt="Lote de ganado cebú bajo una arboleda de sombrío, con la cordillera al fondo"></picture>
-        <div class="card-body">
-          <span class="card-tag">Puerto Salgar, Cundinamarca &middot; Magdalena Medio</span>
-          <h2>Finca ganadera de 560 hect&aacute;reas sobre la Ruta del Sol</h2>
-          <p class="small" style="color:var(--ink-2)">110 potreros y capacidad para 800 animales todo el a&ntilde;o, en brachiaria, angleton y mombasa. Corral nuevo, casa principal y dos campamentos. 1,3 km de frente sobre la v&iacute;a.</p>
-          <div class="card-facts"><div><b class="num">560 ha</b><span>&Aacute;rea</span></div><div><b class="num">110</b><span>Potreros</span></div><div><b class="num">$42,9 M/ha</b><span>Precio</span></div></div>
-          <span class="card-cta">Ver la finca &rarr;</span>
-        </div>
-      </a>
-      <a class="card" href="fincas/cimitarra/">
-        <picture><source type="image/webp" srcset="img/finca-3.webp"><img src="img/finca-3.jpg" width="1200" height="750" loading="lazy" alt="Potrero plano de pasto parejo con monte al fondo y cielo despejado"></picture>
-        <div class="card-body">
-          <span class="card-tag">Cimitarra, Santander &middot; Magdalena Medio</span>
-          <h2>Finca de 500 hect&aacute;reas con vegas del r&iacute;o Carare</h2>
-          <p class="small" style="color:var(--ink-2)">Tierra plana para cr&iacute;a, levante y ceba, o para agricultura. Casa principal, casa de mayordomo, corral techado y b&aacute;scula. Sobre la v&iacute;a principal a Bucaramanga.</p>
-          <div class="card-facts"><div><b class="num">500 ha</b><span>&Aacute;rea</span></div><div><b class="num">Vegas</b><span>Del r&iacute;o Carare</span></div><div><b class="num">$30 M/ha</b><span>Precio</span></div></div>
-          <span class="card-cta">Ver la finca &rarr;</span>
-        </div>
-      </a>
+    <div class="stack-sm narrow"><p class="eyebrow">Lo que nos comprometemos a hacer</p><h2>Siete compromisos por escrito</h2>
+      <p class="lede">Primero cuidamos su riesgo: seguridad, papeles y a quién le abre la puerta. Después el precio.</p></div>
+    <div class="comp">
+      <article><span class="k">Compromiso</span><h3>Discreción</h3><p>No publicamos la vereda, el nombre de la finca ni el suyo. El comprador solo sabe la región hasta que pasa el filtro; la ubicación exacta se entrega el día de la visita.</p></article>
+      <article><span class="k">Compromiso</span><h3>Compradores filtrados</h3><p>Antes de visitar, el interesado se identifica, muestra cómo pagaría y acepta confidencialidad. Revisamos su nombre en listas restrictivas. Usted aprueba cada visita.</p></article>
+      <article><span class="k">Compromiso</span><h3>Papeles primero</h3><p>Revisamos con abogado el certificado de tradición y si su municipio exige avisar a la Agencia Nacional de Tierras antes de vender. Lo sabe desde el primer día, no en la notaría.</p></article>
+      <article><span class="k">Compromiso</span><h3>Una ficha que dice la verdad</h3><p>Visitamos la finca y la mostramos con fotos reales y tomas aéreas: agua, potreros, corrales, casas. Lo que no se pueda comprobar dice «por confirmar».</p></article>
+      <article><span class="k">Compromiso</span><h3>Precio honesto</h3><p>Le damos nuestra opinión de precio con sustento, aunque no sea la que espera. No inflamos el número para quedarnos con su finca: un precio inflado la deja parada.</p></article>
+      <article><span class="k">Compromiso</span><h3>Usted sabe en qué va</h3><p>Le reportamos por WhatsApp, con la frecuencia que acordemos, cuántos interesados hubo, cuántos pasaron el filtro, qué objeciones salieron y qué visitas hay.</p></article>
+      <article><span class="k">Compromiso</span><h3>Hasta la escritura</h3><p>Coordinamos la promesa, la notaría y la documentación ganadera (registro ICA de hierros y vacunación, inventario si se vende con ganado) junto con su abogado y su contador.</p></article>
     </div>
-    <p class="small">Precios en pesos colombianos. Ubicaci&oacute;n exacta, linderos y papeles se comparten con el interesado por WhatsApp.</p>
+    <p class="no"><b>Lo que no le prometemos:</b> un precio de venta, un plazo ni «compradores esperando». Nadie serio puede prometer eso antes de conocer la finca y sus papeles.</p>
   </div>
 </section>
-<section style="background:var(--raise);border-block:1px solid var(--line)">
-  <div class="wrap">
-    <div class="sell">
-      <div class="stack-sm">
-        <p class="eyebrow">¿Tiene una finca ganadera para vender?</p>
-        <h2>Véndala sin exponerla</h2>
-        <p class="lede">Venta privada: sin publicar su ubicación ni su nombre, solo compradores filtrados y papeles revisados antes de mostrarla. Buscamos fincas ganaderas en Colombia, de preferencia desde 300 hectáreas.</p>
-      </div>
-      <a class="btn btn-main" href="vender/">Quiero vender mi finca</a>
-    </div>
-  </div>
-</section>
-<section class="contact">
+
+<section style="background:var(--card);border-block:1px solid var(--line)">
   <div class="wrap stack">
-    <div class="stack-sm narrow">
-      <p class="eyebrow">Contacto</p>
-      <h2>Le mostramos la finca que quiera</h2>
-      <p class="lede">Escr&iacute;banos por WhatsApp con el nombre de la finca y coordinamos el recorrido.</p>
-      <div class="cta"><a class="btn btn-main" href="https://wa.me/573004903639?text=Hola%2C%20vi%20el%20portafolio%20de%20fincas%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
-      <p class="small" style="margin-top:14px">+57 300 490 3639 &nbsp;·&nbsp; Le atiende <b style="color:var(--on-deep)">George Marroquin</b>.</p>
+    <div class="stack-sm narrow"><p class="eyebrow">Cómo funciona</p><h2>De la primera llamada a la escritura</h2></div>
+    <ol class="pasos">
+      <li><b>Primer contacto</b><p>Nos escribe o llena el formulario, y George lo llama. Es una conversación sin compromiso.</p></li>
+      <li><b>Visita y revisión</b><p>Vamos a la finca, tomamos fotos y datos, y revisamos los papeles antes de firmar nada.</p></li>
+      <li><b>Ficha y compradores filtrados</b><p>Armamos la ficha privada y solo la mostramos a interesados verificados. Usted aprueba cada visita.</p></li>
+      <li><b>Cierre</b><p>Acompañamos la negociación, la promesa de compraventa y la escritura.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <div class="stack-sm narrow"><p class="eyebrow">A quién buscamos</p><h2>Fincas ganaderas en Colombia</h2></div>
+    <div class="quien"><span class="big">300 ha</span><p>Buscamos fincas del sector ganadero en cualquier región de Colombia, preferiblemente de <b>300 hectáreas o más</b>. Si la suya es distinta, escríbanos igual: los casos particulares se revisan uno por uno.</p></div>
+  </div>
+</section>
+
+<section id="formulario" style="background:var(--raise);border-block:1px solid var(--line)">
+  <div class="wrap stack">
+    <div class="stack-sm narrow"><p class="eyebrow">Déjenos sus datos</p><h2>Le devolvemos la llamada</h2>
+      <p class="lede">Lo mínimo: lo demás se habla por teléfono. Al enviar se abre WhatsApp con su mensaje listo; usted decide si lo manda.</p></div>
+    <form class="form" id="vf" novalidate>
+      <label>Su nombre<input id="vf-nombre" name="nombre" autocomplete="name" required></label>
+      <label>Departamento de la finca<select id="vf-depto" name="departamento" required><option value="">Elija uno</option><option value="Amazonas">Amazonas</option><option value="Antioquia">Antioquia</option><option value="Arauca">Arauca</option><option value="Atlántico">Atlántico</option><option value="Bolívar">Bolívar</option><option value="Boyacá">Boyacá</option><option value="Caldas">Caldas</option><option value="Caquetá">Caquetá</option><option value="Casanare">Casanare</option><option value="Cauca">Cauca</option><option value="Cesar">Cesar</option><option value="Chocó">Chocó</option><option value="Córdoba">Córdoba</option><option value="Cundinamarca">Cundinamarca</option><option value="Guainía">Guainía</option><option value="Guaviare">Guaviare</option><option value="Huila">Huila</option><option value="La Guajira">La Guajira</option><option value="Magdalena">Magdalena</option><option value="Meta">Meta</option><option value="Nariño">Nariño</option><option value="Norte de Santander">Norte de Santander</option><option value="Putumayo">Putumayo</option><option value="Quindío">Quindío</option><option value="Risaralda">Risaralda</option><option value="San Andrés y Providencia">San Andrés y Providencia</option><option value="Santander">Santander</option><option value="Sucre">Sucre</option><option value="Tolima">Tolima</option><option value="Valle del Cauca">Valle del Cauca</option><option value="Vaupés">Vaupés</option><option value="Vichada">Vichada</option></select></label>
+      <label>Hectáreas aproximadas<input id="vf-ha" name="hectareas" inputmode="numeric" placeholder="Ej. 450" required></label>
+      <label>Uso actual<select id="vf-uso" name="uso"><option value="">Elija uno</option><option>Cría</option><option>Levante</option><option>Ceba</option><option>Doble propósito</option><option>Otro</option></select></label>
+      <label>¿Escritura y certificado de tradición a su nombre?<select id="vf-papeles" name="papeles"><option value="">Elija uno</option><option>Sí</option><option>No</option><option>En trámite</option></select></label>
+      <label>¿Se vendería con ganado?<select id="vf-ganado" name="ganado"><option value="">Elija uno</option><option>Sí</option><option>No</option><option>Por definir</option></select></label>
+      <label class="full">Mejor hora para llamarlo<input id="vf-hora" name="hora" placeholder="Ej. entre semana, después de las 5 p. m."></label>
+      <label class="check full"><input type="checkbox" id="vf-ok" name="autorizacion"> Autorizo a Hierro &amp; Tierra a usar estos datos solo para contactarme sobre la venta de mi finca, conforme a la Ley 1581 de 2012. No los compartimos con terceros.</label>
+      <button class="btn btn-main" type="submit">Enviar por WhatsApp</button>
+      <p class="msg full" role="status" aria-live="polite"></p>
+    </form>
+    <p class="small">No pedimos la vereda ni el municipio en este formulario: esos datos se hablan por teléfono.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <div class="stack-sm narrow"><p class="eyebrow">Preguntas frecuentes</p><h2>Lo que nos preguntan los dueños</h2></div>
+    <div class="faq">
+      <details><summary>¿Van a publicar mi finca en internet?</summary><p>No con su ubicación exacta ni con su nombre. La ficha circula en privado entre compradores filtrados; solo se menciona la región.</p></details>
+      <details><summary>¿Cuánto cobran?</summary><p>Una comisión sobre el valor de la venta, más IVA, que se paga solo si la finca se vende. El porcentaje se lo decimos en la primera llamada y queda por escrito.</p></details>
+      <details><summary>¿Cuánto se demora la venta?</summary><p>No le vamos a prometer un plazo. Depende del precio, de los papeles y de si su municipio exige avisar a la Agencia Nacional de Tierras. Eso lo averiguamos antes de firmar.</p></details>
+      <details><summary>¿Tengo que firmar exclusividad?</summary><p>Proponemos un mandato exclusivo por un tiempo definido, con prórroga solo si usted la firma. Así podemos invertir en la visita, las fotos aéreas y la revisión de papeles.</p></details>
+      <details><summary>¿Y si mis papeles no están perfectos?</summary><p>Díganoslo desde el principio. Revisamos con abogado qué tiene arreglo y cuánto toma, antes de mostrar la finca.</p></details>
+      <details><summary>¿Ustedes compran la finca?</summary><p>Hoy no compramos fincas con capital propio. Si necesita liquidez rápida, buscamos un comprador con el dinero listo y usted decide si le sirve el precio.</p></details>
+      <details><summary>¿Puedo vender con el ganado?</summary><p>Sí. Se vende con inventario y con el registro ICA de hierros y vacunación al día.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap stack">
+    <div class="stack-sm narrow"><p class="eyebrow">Hablemos</p><h2>Una llamada de 15 minutos, sin compromiso</h2>
+      <p class="lede">Cuéntenos qué lo tiene pensando en vender y cómo están los papeles. Lo que hablemos queda entre nosotros.</p>
+      <div class="cta"><a class="btn btn-main" href="https://wa.me/573004903639?text=Hola%2C%20tengo%20una%20finca%20ganadera%20y%20quiero%20venderla%20con%20Hierro%20%26%20Tierra.%20%C2%BFPodemos%20hablar%3F%20%5BHT-VENDER%5D" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
+      <p class="small" style="margin-top:14px">+57 300 490 3639 &nbsp;·&nbsp; Le atiende <b style="color:var(--on-deep)">George Marroquin</b></p>
     </div>
   </div>
 </section>
@@ -491,8 +542,28 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
       <span class="brand-sub" style="display:block">Trading &amp; Activos Rurales</span>
       <p class="brand-tagline">M&aacute;s que tierra, legado.</p>
     </div>
-    <p class="brand-meta">Le atiende George Marroquin<br><a href="https://wa.me/573004903639">WhatsApp +57 300 490 3639</a><br><a href="./">Ver todas las fincas</a></p>
+    <p class="brand-meta">Le atiende George Marroquin<br><a href="https://wa.me/573004903639">WhatsApp +57 300 490 3639</a><br><a href="../">Ver todas las fincas</a></p>
   </div>
 </footer>
+<script>
+(function(){
+  var f=document.getElementById('vf'); if(!f) return;
+  var wa=document.body.getAttribute('data-wa'), code=document.body.getAttribute('data-code');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return (document.getElementById(id).value||'').trim();};
+    var msg=f.querySelector('.msg');
+    if(!document.getElementById('vf-ok').checked){msg.textContent='Marque la autorización para que podamos contactarlo.';return;}
+    if(!v('vf-nombre')||!v('vf-depto')||!v('vf-ha')){msg.textContent='Escriba su nombre, el departamento y las hectáreas aproximadas.';return;}
+    var t='Hola, soy '+v('vf-nombre')+'. Quiero vender mi finca ganadera en '+v('vf-depto')+', de unas '+v('vf-ha')+' ha.'
+      +(v('vf-uso')?' Uso actual: '+v('vf-uso')+'.':'')
+      +(v('vf-papeles')?' Escritura y certificado de tradición a mi nombre: '+v('vf-papeles')+'.':'')
+      +(v('vf-ganado')?' ¿Con ganado?: '+v('vf-ganado')+'.':'')
+      +(v('vf-hora')?' Mejor hora para llamarme: '+v('vf-hora')+'.':'')+' '+code;
+    msg.textContent='Abriendo WhatsApp con su mensaje listo para enviar.';
+    window.location.href='https://wa.me/'+wa+'?text='+encodeURIComponent(t);
+  });
+})();
+</script>
 </body>
 </html>
