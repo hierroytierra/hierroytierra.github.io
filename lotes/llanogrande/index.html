@@ -403,6 +403,11 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 }
 /* ---- galeria ---- */
 .shot{margin:0}
+@media (min-width:860px){
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .gallery .shot:first-child{grid-column:1/-1}
+  .gallery .shot:first-child img{aspect-ratio:16/9}
+}
 .shot img,.section-photo img{cursor:zoom-in}
 @media (max-width:859px){
   .gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px;-webkit-overflow-scrolling:touch}

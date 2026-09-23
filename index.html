@@ -312,7 +312,10 @@ section{padding-block:clamp(52px,7vw,88px)}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:6px}
 .card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:3px;overflow:hidden;box-shadow:var(--shadow);color:inherit;text-decoration:none;transition:transform .16s ease}
 .card:hover{transform:translateY(-2px)}
-.card img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block}
+.card picture{display:block;overflow:hidden}
+.card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;transition:transform .5s ease}
+.card:hover img{transform:scale(1.03)}
+@media (prefers-reduced-motion:reduce){.card img{transition:none}.card:hover img{transform:none}}
 .card-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
 .card h2{font-size:1.35rem}
 .card-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:4px}
@@ -321,6 +324,7 @@ section{padding-block:clamp(52px,7vw,88px)}
 .card-cta{margin-top:auto;padding-top:14px;border-top:1px solid var(--line-soft);font-weight:600;color:var(--pasto);font-size:.92rem}
 .card-tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 @media (max-width:760px){.cards{grid-template-columns:1fr}}
+@media (min-width:761px){.card:first-child{grid-column:1/-1;display:grid;grid-template-columns:1.45fr 1fr}.card:first-child picture,.card:first-child img{height:100%}.card:first-child img{aspect-ratio:auto;min-height:420px}.card:first-child h2{font-size:1.7rem}}
 .sell{display:flex;flex-wrap:wrap;gap:22px 40px;align-items:center;justify-content:space-between}
 .sell .stack-sm{max-width:620px}
 
@@ -427,7 +431,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
   <div class="wrap stack">
     <div class="cards">
       <a class="card" href="fincas/puerto-boyaca/">
-        <picture><source type="image/webp" srcset="img/finca-1.webp"><img src="img/finca-1.jpg" width="1200" height="750" loading="eager" alt="Lomas de pasto con palma y sombrío en Puerto Boyacá"></picture>
+        <picture><source type="image/webp" srcset="img/finca-1.webp"><img src="img/finca-1.jpg" width="1500" height="1000" loading="eager" alt="Lomas de pasto con palma y sombrío en Puerto Boyacá"></picture>
         <div class="card-body">
           <span class="card-tag">Puerto Boyac&aacute; &middot; Magdalena Medio</span>
           <h2>Finca ganadera de 510 hect&aacute;reas, finca montada</h2>
@@ -437,7 +441,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
         </div>
       </a>
       <a class="card" href="fincas/puerto-salgar/">
-        <picture><source type="image/webp" srcset="img/finca-2.webp"><img src="img/finca-2.jpg" width="1200" height="750" loading="eager" alt="Lote de ganado cebú bajo una arboleda de sombrío, con la cordillera al fondo"></picture>
+        <picture><source type="image/webp" srcset="img/finca-2.webp"><img src="img/finca-2.jpg" width="1500" height="1000" loading="eager" alt="Lote de ganado cebú bajo una arboleda de sombrío, con la cordillera al fondo"></picture>
         <div class="card-body">
           <span class="card-tag">Puerto Salgar, Cundinamarca &middot; Magdalena Medio</span>
           <h2>Finca ganadera de 560 hect&aacute;reas sobre la Ruta del Sol</h2>
@@ -447,7 +451,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
         </div>
       </a>
       <a class="card" href="fincas/cimitarra/">
-        <picture><source type="image/webp" srcset="img/finca-3.webp"><img src="img/finca-3.jpg" width="1200" height="750" loading="lazy" alt="Potrero plano de pasto parejo con monte al fondo y cielo despejado"></picture>
+        <picture><source type="image/webp" srcset="img/finca-3.webp"><img src="img/finca-3.jpg" width="1500" height="1000" loading="lazy" alt="Potrero plano de pasto parejo con monte al fondo y cielo despejado"></picture>
         <div class="card-body">
           <span class="card-tag">Cimitarra, Santander &middot; Magdalena Medio</span>
           <h2>Finca de 500 hect&aacute;reas con vegas del r&iacute;o Carare</h2>

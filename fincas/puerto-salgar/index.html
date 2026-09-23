@@ -315,6 +315,26 @@ section{padding-block:clamp(52px,7vw,88px)}
 .hero{position:relative;min-height:clamp(380px,58vh,620px)}
 .hero picture>img,.hero>img{position:absolute;inset:0;width:100%;height:100%;min-height:0;object-fit:cover}
 .hero-veil,.hero-body{position:relative}
+/* ---- vitrina de fotos grandes ---- */
+.lead{margin:0;border-radius:3px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.lead img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;cursor:zoom-in}
+.lead figcaption,.tile figcaption{font-size:.84rem;color:var(--muted);padding:10px 14px;line-height:1.45}
+.show-grid{columns:2 320px;column-gap:16px}
+.tile{margin:0 0 16px;break-inside:avoid;border-radius:3px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.tile img{width:100%;height:auto;display:block;cursor:zoom-in;object-fit:cover}
+.tile.h img{aspect-ratio:3/2}
+.tile.v img{aspect-ratio:4/5}
+@media (max-width:759px){
+  .show-grid{columns:auto;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .tile{flex:0 0 auto;margin:0;scroll-snap-align:start}
+  .tile.h{width:86vw}
+  .tile.v{width:58vw}
+  .tile.h img,.tile.v img{height:66vw;width:100%;aspect-ratio:auto}
+}
+.band{margin:0;position:relative;background:#121614}
+.band img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;display:block;cursor:zoom-in}
+.band figcaption{font-size:.84rem;color:#A9B3AB;padding-block:10px}
+@media (max-width:759px){.band img{aspect-ratio:16/10}}
 
 /* ===== Hierro & Tierra — tokens de marca (sobrescriben base.css) ===== */
 :root{
@@ -415,6 +435,11 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 }
 /* ---- galeria ---- */
 .shot{margin:0}
+@media (min-width:860px){
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .gallery .shot:first-child{grid-column:1/-1}
+  .gallery .shot:first-child img{aspect-ratio:16/9}
+}
 .shot img,.section-photo img{cursor:zoom-in}
 @media (max-width:859px){
   .gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px;-webkit-overflow-scrolling:touch}
@@ -460,7 +485,7 @@ body.has-stick{padding-bottom:72px}
   </div>
 </header>
 <header class="hero">
-  <picture><source type="image/webp" srcset="img/portada-v2-900.webp 900w, img/portada-v2-1600.webp 1600w" sizes="100vw"><img src="img/portada-v2-1600.jpg" srcset="img/portada-v2-900.jpg 900w, img/portada-v2-1600.jpg 1600w" sizes="100vw" width="1600" height="650" fetchpriority="high" loading="eager" data-full="img/portada-v2-1600.jpg" alt="Lote de ganado cebú bajo una arboleda de sombrío, con la cordillera al fondo, en Puerto Salgar"></picture>
+  <picture><source type="image/webp" srcset="img/portada-v2-4c8774-900.webp 900w, img/portada-v2-4c8774-1600.webp 1600w" sizes="100vw"><img src="img/portada-v2-4c8774-1600.jpg" srcset="img/portada-v2-4c8774-900.jpg 900w, img/portada-v2-4c8774-1600.jpg 1600w" sizes="100vw" width="1600" height="650" fetchpriority="high" loading="eager" data-full="img/portada-v2-4c8774-1600.jpg" alt="Lote de ganado cebú bajo una arboleda de sombrío, con la cordillera al fondo, en Puerto Salgar"></picture>
   <img class="hero-seal" src="img/ht-logo-256.png" width="64" height="64" alt="">
   <div class="hero-veil"></div>
   <div class="hero-body">
@@ -533,17 +558,17 @@ body.has-stick{padding-bottom:72px}
         <p>Corrales de madera bajo techo, junto a una bodega en bloque, como se ve en la foto. Si tiene báscula, brete y embarcadero: se ve en la visita.</p>
       </div>
     </div>
-    <div class="gallery">
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/ganado-1-480.webp 480w, img/ganado-1-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/ganado-1-900.jpg" srcset="img/ganado-1-480.jpg 480w, img/ganado-1-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1599" loading="lazy" decoding="async" data-full="img/ganado-1-900.jpg" alt="Res cebú blanca de perfil en el potrero, detrás de la cerca de alambre"></picture>
+    <div class="show-grid">
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/ganado-1-4331db-600.webp 600w, img/ganado-1-4331db-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/ganado-1-4331db-1100.jpg" srcset="img/ganado-1-4331db-600.jpg 600w, img/ganado-1-4331db-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1954" loading="lazy" decoding="async" data-full="img/ganado-1-4331db-1100.jpg" alt="Res cebú blanca de perfil en el potrero, detrás de la cerca de alambre"></picture>
         <figcaption>Cebú en el potrero.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/ganado-2-480.webp 480w, img/ganado-2-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/ganado-2-900.jpg" srcset="img/ganado-2-480.jpg 480w, img/ganado-2-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1599" loading="lazy" decoding="async" data-full="img/ganado-2-900.jpg" alt="Res cebú blanca caminando por el potrero plano, con un árbol de sombrío al fondo"></picture>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/ganado-2-63980e-600.webp 600w, img/ganado-2-63980e-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/ganado-2-63980e-1100.jpg" srcset="img/ganado-2-63980e-600.jpg 600w, img/ganado-2-63980e-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1954" loading="lazy" decoding="async" data-full="img/ganado-2-63980e-1100.jpg" alt="Res cebú blanca caminando por el potrero plano, con un árbol de sombrío al fondo"></picture>
         <figcaption>Cebú en potrero plano, con sombrío al fondo.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/corral-480.webp 480w, img/corral-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/corral-900.jpg" srcset="img/corral-480.jpg 480w, img/corral-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/corral-900.jpg" alt="Corrales de madera bajo techo de zinc, junto a una bodega en bloque blanco y árboles grandes"></picture>
+      <figure class="tile h">
+        <picture><source type="image/webp" srcset="img/corral-39ae3a-600.webp 600w, img/corral-39ae3a-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/corral-39ae3a-1100.jpg" srcset="img/corral-39ae3a-600.jpg 600w, img/corral-39ae3a-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="619" loading="lazy" decoding="async" data-full="img/corral-39ae3a-1100.jpg" alt="Corrales de madera bajo techo de zinc, junto a una bodega en bloque blanco y árboles grandes"></picture>
         <figcaption>Corrales de madera bajo techo, junto a la bodega.</figcaption>
       </figure>
     </div>
@@ -589,34 +614,50 @@ body.has-stick{padding-bottom:72px}
         <p>Viviendas aparte de la casa principal. Cómo está cada una y para qué se usa: se recorren en la visita.</p>
       </div>
     </div>
-    <div class="gallery">
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/casa-principal-480.webp 480w, img/casa-principal-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/casa-principal-900.jpg" srcset="img/casa-principal-480.jpg 480w, img/casa-principal-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1599" loading="lazy" decoding="async" data-full="img/casa-principal-900.jpg" alt="Corredor de la casa principal con techo de teja, vigas de madera y ventanales de marco negro"></picture>
-        <figcaption>Corredor cubierto de la casa principal.</figcaption>
+    <figure class="lead">
+      <picture><source type="image/webp" srcset="img/casa-fachada-d740f4-800.webp 800w, img/casa-fachada-d740f4-1600.webp 1600w" sizes="(max-width:1100px) 100vw, 1060px"><img src="img/casa-fachada-d740f4-1600.jpg" srcset="img/casa-fachada-d740f4-800.jpg 800w, img/casa-fachada-d740f4-1600.jpg 1600w" sizes="(max-width:1100px) 100vw, 1060px" width="1600" height="730" loading="lazy" decoding="async" data-full="img/casa-fachada-d740f4-1600.jpg" alt="Fachada de la casa principal con techo de teja y árboles grandes al frente"></picture>
+      <figcaption>La casa principal, entre árboles grandes.</figcaption>
+    </figure>
+    <div class="show-grid">
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/casa-piscina-d4d188-600.webp 600w, img/casa-piscina-d4d188-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/casa-piscina-d4d188-1100.jpg" srcset="img/casa-piscina-d4d188-600.jpg 600w, img/casa-piscina-d4d188-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1954" loading="lazy" decoding="async" data-full="img/casa-piscina-d4d188-1100.jpg" alt="Piscina y kiosco techado, vistos desde el corredor de la casa"></picture>
+        <figcaption>Piscina y kiosco, con el potrero de fondo.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/piscina-480.webp 480w, img/piscina-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/piscina-900.jpg" srcset="img/piscina-480.jpg 480w, img/piscina-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1599" loading="lazy" decoding="async" data-full="img/piscina-900.jpg" alt="Piscina tapada con malla y kiosco techado con comedor, vistos desde el corredor de la casa"></picture>
-        <figcaption>Piscina y kiosco, vistos desde la casa.</figcaption>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/casa-corredor-7fdb8a-600.webp 600w, img/casa-corredor-7fdb8a-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/casa-corredor-7fdb8a-1100.jpg" srcset="img/casa-corredor-7fdb8a-600.jpg 600w, img/casa-corredor-7fdb8a-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1954" loading="lazy" decoding="async" data-full="img/casa-corredor-7fdb8a-1100.jpg" alt="Corredor techado con vigas de madera y ventanales de marco negro"></picture>
+        <figcaption>Corredor techado de la casa principal.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/comedor-480.webp 480w, img/comedor-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/comedor-900.jpg" srcset="img/comedor-480.jpg 480w, img/comedor-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" data-full="img/comedor-900.jpg" alt="Comedor de la casa principal con mesa larga de madera, sillas y banca"></picture>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/casa-sala-38cfe9-600.webp 600w, img/casa-sala-38cfe9-946.webp 946w" sizes="(max-width:760px) 90vw, 530px"><img src="img/casa-sala-38cfe9-946.jpg" srcset="img/casa-sala-38cfe9-600.jpg 600w, img/casa-sala-38cfe9-946.jpg 946w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="2326" loading="lazy" decoding="async" data-full="img/casa-sala-38cfe9-946.jpg" alt="Sala de techo alto en vigas de madera con muebles claros"></picture>
+        <figcaption>Sala de techo alto.</figcaption>
+      </figure>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/casa-comedor-152b0a-600.webp 600w, img/casa-comedor-152b0a-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/casa-comedor-152b0a-1100.jpg" srcset="img/casa-comedor-152b0a-600.jpg 600w, img/casa-comedor-152b0a-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1956" loading="lazy" decoding="async" data-full="img/casa-comedor-152b0a-1100.jpg" alt="Comedor con mesa larga de madera, sillas y banca"></picture>
         <figcaption>Comedor de la casa principal.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/habitacion-480.webp 480w, img/habitacion-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/habitacion-900.jpg" srcset="img/habitacion-480.jpg 480w, img/habitacion-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1599" loading="lazy" decoding="async" data-full="img/habitacion-900.jpg" alt="Habitación con cama doble, aire acondicionado y banca de madera"></picture>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/casa-habitacion-1-43300c-600.webp 600w, img/casa-habitacion-1-43300c-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/casa-habitacion-1-43300c-1100.jpg" srcset="img/casa-habitacion-1-43300c-600.jpg 600w, img/casa-habitacion-1-43300c-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1954" loading="lazy" decoding="async" data-full="img/casa-habitacion-1-43300c-1100.jpg" alt="Habitación con cama doble, aire acondicionado y banca de madera"></picture>
         <figcaption>Habitación con aire acondicionado.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/corredor-480.webp 480w, img/corredor-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/corredor-900.jpg" srcset="img/corredor-480.jpg 480w, img/corredor-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1599" loading="lazy" decoding="async" data-full="img/corredor-900.jpg" alt="Corredor de la casa con un árbol grande de sombrío y el potrero al fondo"></picture>
-        <figcaption>Corredor de la casa; al fondo, el potrero.</figcaption>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/casa-habitacion-2-250b67-600.webp 600w, img/casa-habitacion-2-250b67-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/casa-habitacion-2-250b67-1100.jpg" srcset="img/casa-habitacion-2-250b67-600.jpg 600w, img/casa-habitacion-2-250b67-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1954" loading="lazy" decoding="async" data-full="img/casa-habitacion-2-250b67-1100.jpg" alt="Otra habitación con aire acondicionado, ventanal y puertas de madera"></picture>
+        <figcaption>Otra de las habitaciones.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/vivienda-480.webp 480w, img/vivienda-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/vivienda-900.jpg" srcset="img/vivienda-480.jpg 480w, img/vivienda-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" data-full="img/vivienda-900.jpg" alt="Vivienda en bloque blanco con techo de zinc y corredor"></picture>
-        <figcaption>Vivienda en bloque, aparte de la casa principal.</figcaption>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/casa-corredor-arbol-b9c2b0-600.webp 600w, img/casa-corredor-arbol-b9c2b0-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/casa-corredor-arbol-b9c2b0-1100.jpg" srcset="img/casa-corredor-arbol-b9c2b0-600.jpg 600w, img/casa-corredor-arbol-b9c2b0-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1954" loading="lazy" decoding="async" data-full="img/casa-corredor-arbol-b9c2b0-1100.jpg" alt="Final del corredor con un árbol grande de sombrío y el potrero al fondo"></picture>
+        <figcaption>Desde el corredor: árbol de sombrío y potrero.</figcaption>
+      </figure>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/casa-otra-c9255b-600.webp 600w, img/casa-otra-c9255b-990.webp 990w" sizes="(max-width:760px) 90vw, 530px"><img src="img/casa-otra-c9255b-990.jpg" srcset="img/casa-otra-c9255b-600.jpg 600w, img/casa-otra-c9255b-990.jpg 990w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="2222" loading="lazy" decoding="async" data-full="img/casa-otra-c9255b-990.jpg" alt="Vivienda en bloque blanco con corredor, aparte de la casa principal"></picture>
+        <figcaption>Otra de las casas de la finca.</figcaption>
       </figure>
     </div>
   </div>
 </section>
+<figure class="band">
+  <picture><source type="image/webp" srcset="img/banda-loma-f0b540-900.webp 900w, img/banda-loma-f0b540-1600.webp 1600w" sizes="100vw"><img src="img/banda-loma-f0b540-1600.jpg" srcset="img/banda-loma-f0b540-900.jpg 900w, img/banda-loma-f0b540-1600.jpg 1600w" sizes="100vw" width="1600" height="686" loading="lazy" decoding="async" data-full="img/banda-loma-f0b540-1600.jpg" alt="Loma de pasto con bosque en la cresta bajo cielo azul"></picture>
+  <figcaption class="wrap">Loma con monte en la cresta.</figcaption>
+</figure>
 <section id="acceso" style="background:var(--card);border-block:1px solid var(--line)">
   <div class="wrap stack">
     <div class="stack-sm narrow">
@@ -643,30 +684,26 @@ body.has-stick{padding-bottom:72px}
       <h2>Potreros planos, sombrío y cordillera al fondo</h2>
       <p class="lede">Fotos tomadas en la finca en septiembre de 2026, sin retoque.</p>
     </div>
-    <div class="gallery">
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/tierra-1-480.webp 480w, img/tierra-1-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/tierra-1-900.jpg" srcset="img/tierra-1-480.jpg 480w, img/tierra-1-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="507" loading="lazy" decoding="async" data-full="img/tierra-1-900.jpg" alt="Potrero plano detrás de una cerca de poste y alambre, con árboles y la cordillera al fondo"></picture>
-        <figcaption>Potrero plano; al fondo, la cordillera.</figcaption>
+    <figure class="lead">
+      <picture><source type="image/webp" srcset="img/tierra-cordillera-d8464c-800.webp 800w, img/tierra-cordillera-d8464c-1600.webp 1600w" sizes="(max-width:1100px) 100vw, 1060px"><img src="img/tierra-cordillera-d8464c-1600.jpg" srcset="img/tierra-cordillera-d8464c-800.jpg 800w, img/tierra-cordillera-d8464c-1600.jpg 1600w" sizes="(max-width:1100px) 100vw, 1060px" width="1600" height="901" loading="lazy" decoding="async" data-full="img/tierra-cordillera-d8464c-1600.jpg" alt="Potrero plano detrás de una cerca, con árboles y la cordillera al fondo"></picture>
+      <figcaption>Potrero plano; al fondo, la cordillera.</figcaption>
+    </figure>
+    <div class="show-grid">
+      <figure class="tile h">
+        <picture><source type="image/webp" srcset="img/tierra-sombrio-b78969-600.webp 600w, img/tierra-sombrio-b78969-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/tierra-sombrio-b78969-1100.jpg" srcset="img/tierra-sombrio-b78969-600.jpg 600w, img/tierra-sombrio-b78969-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="619" loading="lazy" decoding="async" data-full="img/tierra-sombrio-b78969-1100.jpg" alt="Potrero con árboles de sombrío y ganado al fondo"></picture>
+        <figcaption>Potrero con sombrío.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/tierra-2-480.webp 480w, img/tierra-2-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/tierra-2-900.jpg" srcset="img/tierra-2-480.jpg 480w, img/tierra-2-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="507" loading="lazy" decoding="async" data-full="img/tierra-2-900.jpg" alt="Carreteable destapado y portón metálico de potrero marcado con el número 18"></picture>
-        <figcaption>Carreteable interno y portón de potrero numerado.</figcaption>
+      <figure class="tile h">
+        <picture><source type="image/webp" srcset="img/tierra-porton-063342-600.webp 600w, img/tierra-porton-063342-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/tierra-porton-063342-1100.jpg" srcset="img/tierra-porton-063342-600.jpg 600w, img/tierra-porton-063342-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="619" loading="lazy" decoding="async" data-full="img/tierra-porton-063342-1100.jpg" alt="Carreteable destapado y portón metálico de potrero"></picture>
+        <figcaption>Carreteable interno y portón de potrero.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/tierra-3-480.webp 480w, img/tierra-3-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/tierra-3-900.jpg" srcset="img/tierra-3-480.jpg 480w, img/tierra-3-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="507" loading="lazy" decoding="async" data-full="img/tierra-3-900.jpg" alt="Potrero con árboles de sombrío, reses cebú y una res negra"></picture>
-        <figcaption>Potrero con sombrío; cebú y una res negra.</figcaption>
-      </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/tierra-4-480.webp 480w, img/tierra-4-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/tierra-4-900.jpg" srcset="img/tierra-4-480.jpg 480w, img/tierra-4-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="507" loading="lazy" decoding="async" data-full="img/tierra-4-900.jpg" alt="Lote de cebú a la sombra de la arboleda, con la cordillera al fondo"></picture>
-        <figcaption>El lote de cebú a la sombra de la arboleda.</figcaption>
-      </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/tierra-5-480.webp 480w, img/tierra-5-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/tierra-5-900.jpg" srcset="img/tierra-5-480.jpg 480w, img/tierra-5-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/tierra-5-900.jpg" alt="Rancho de madera techado entre árboles grandes, con un remolque al lado"></picture>
+      <figure class="tile h">
+        <picture><source type="image/webp" srcset="img/tierra-rancho-4b9d30-600.webp 600w, img/tierra-rancho-4b9d30-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/tierra-rancho-4b9d30-1100.jpg" srcset="img/tierra-rancho-4b9d30-600.jpg 600w, img/tierra-rancho-4b9d30-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="619" loading="lazy" decoding="async" data-full="img/tierra-rancho-4b9d30-1100.jpg" alt="Rancho de madera techado entre árboles grandes"></picture>
         <figcaption>Rancho de madera techado, entre árboles grandes.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/tierra-6-480.webp 480w, img/tierra-6-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/tierra-6-900.jpg" srcset="img/tierra-6-480.jpg 480w, img/tierra-6-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/tierra-6-900.jpg" alt="Monte con un tronco grande, palmas y árboles altos"></picture>
-        <figcaption>Monte de árboles grandes y palmas.</figcaption>
+      <figure class="tile h">
+        <picture><source type="image/webp" srcset="img/tierra-monte-9db216-600.webp 600w, img/tierra-monte-9db216-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/tierra-monte-9db216-1100.jpg" srcset="img/tierra-monte-9db216-600.jpg 600w, img/tierra-monte-9db216-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="619" loading="lazy" decoding="async" data-full="img/tierra-monte-9db216-1100.jpg" alt="Monte verde con palmas, platanillo y árboles altos bajo cielo azul"></picture>
+        <figcaption>Monte de palmas y árboles altos.</figcaption>
       </figure>
     </div>
     <p class="small">Fotos de la finca. Sin retoque.</p>

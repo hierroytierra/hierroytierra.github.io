@@ -315,6 +315,26 @@ section{padding-block:clamp(52px,7vw,88px)}
 .hero{position:relative;min-height:clamp(380px,58vh,620px)}
 .hero picture>img,.hero>img{position:absolute;inset:0;width:100%;height:100%;min-height:0;object-fit:cover}
 .hero-veil,.hero-body{position:relative}
+/* ---- vitrina de fotos grandes ---- */
+.lead{margin:0;border-radius:3px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.lead img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;cursor:zoom-in}
+.lead figcaption,.tile figcaption{font-size:.84rem;color:var(--muted);padding:10px 14px;line-height:1.45}
+.show-grid{columns:2 320px;column-gap:16px}
+.tile{margin:0 0 16px;break-inside:avoid;border-radius:3px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.tile img{width:100%;height:auto;display:block;cursor:zoom-in;object-fit:cover}
+.tile.h img{aspect-ratio:3/2}
+.tile.v img{aspect-ratio:4/5}
+@media (max-width:759px){
+  .show-grid{columns:auto;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .tile{flex:0 0 auto;margin:0;scroll-snap-align:start}
+  .tile.h{width:86vw}
+  .tile.v{width:58vw}
+  .tile.h img,.tile.v img{height:66vw;width:100%;aspect-ratio:auto}
+}
+.band{margin:0;position:relative;background:#121614}
+.band img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;display:block;cursor:zoom-in}
+.band figcaption{font-size:.84rem;color:#A9B3AB;padding-block:10px}
+@media (max-width:759px){.band img{aspect-ratio:16/10}}
 
 /* ===== Hierro & Tierra — tokens de marca (sobrescriben base.css) ===== */
 :root{
@@ -415,6 +435,11 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 }
 /* ---- galeria ---- */
 .shot{margin:0}
+@media (min-width:860px){
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .gallery .shot:first-child{grid-column:1/-1}
+  .gallery .shot:first-child img{aspect-ratio:16/9}
+}
 .shot img,.section-photo img{cursor:zoom-in}
 @media (max-width:859px){
   .gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px;-webkit-overflow-scrolling:touch}
@@ -460,7 +485,7 @@ body.has-stick{padding-bottom:72px}
   </div>
 </header>
 <header class="hero">
-  <picture><source type="image/webp" srcset="img/portada-900.webp 900w, img/portada-1600.webp 1600w" sizes="100vw"><img src="img/portada-1600.jpg" srcset="img/portada-900.jpg 900w, img/portada-1600.jpg 1600w" sizes="100vw" width="1600" height="900" fetchpriority="high" loading="eager" data-full="img/portada-1600.jpg" alt="Potrero plano de pasto parejo con monte al fondo y cielo despejado"></picture>
+  <picture><source type="image/webp" srcset="img/portada-fd2d29-900.webp 900w, img/portada-fd2d29-1600.webp 1600w" sizes="100vw"><img src="img/portada-fd2d29-1600.jpg" srcset="img/portada-fd2d29-900.jpg 900w, img/portada-fd2d29-1600.jpg 1600w" sizes="100vw" width="1600" height="900" fetchpriority="high" loading="eager" data-full="img/portada-fd2d29-1600.jpg" alt="Potrero plano de pasto parejo con monte al fondo y cielo despejado"></picture>
   <img class="hero-seal" src="img/ht-logo-256.png" width="64" height="64" alt="">
   <div class="hero-veil"></div>
   <div class="hero-body">
@@ -529,17 +554,17 @@ body.has-stick{padding-bottom:72px}
         <p>El propietario la da con tierras fértiles y potencial agrícola. Qué lotes sirven para sembrar y cuáles quedan en vega: se habla en la visita.</p>
       </div>
     </div>
-    <div class="gallery">
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/potrero-ganado-480.webp 480w, img/potrero-ganado-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-ganado-900.jpg" srcset="img/potrero-ganado-480.jpg 480w, img/potrero-ganado-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/potrero-ganado-900.jpg" alt="Potrero plano de pasto parejo; al fondo, reses pastando junto a un techado con cerca de madera"></picture>
-        <figcaption>Potrero plano; al fondo, ganado y un techado con cerca de madera.</figcaption>
-      </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/potrero-sombrio-480.webp 480w, img/potrero-sombrio-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-sombrio-900.jpg" srcset="img/potrero-sombrio-480.jpg 480w, img/potrero-sombrio-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/potrero-sombrio-900.jpg" alt="Potrero con árboles de sombrío dispersos y cerca de alambre en primer plano"></picture>
+    <figure class="lead">
+      <picture><source type="image/webp" srcset="img/potrero-ganado-d57e01-800.webp 800w, img/potrero-ganado-d57e01-1600.webp 1600w" sizes="(max-width:1100px) 100vw, 1060px"><img src="img/potrero-ganado-d57e01-1600.jpg" srcset="img/potrero-ganado-d57e01-800.jpg 800w, img/potrero-ganado-d57e01-1600.jpg 1600w" sizes="(max-width:1100px) 100vw, 1060px" width="1600" height="900" loading="lazy" decoding="async" data-full="img/potrero-ganado-d57e01-1600.jpg" alt="Potrero plano de pasto parejo; al fondo, reses pastando junto a un techado con cerca de madera"></picture>
+      <figcaption>Potrero plano; al fondo, ganado y un techado con cerca de madera.</figcaption>
+    </figure>
+    <div class="show-grid">
+      <figure class="tile h">
+        <picture><source type="image/webp" srcset="img/potrero-sombrio-461e53-600.webp 600w, img/potrero-sombrio-461e53-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/potrero-sombrio-461e53-1100.jpg" srcset="img/potrero-sombrio-461e53-600.jpg 600w, img/potrero-sombrio-461e53-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="619" loading="lazy" decoding="async" data-full="img/potrero-sombrio-461e53-1100.jpg" alt="Potrero con árboles de sombrío dispersos y cerca de alambre en primer plano"></picture>
         <figcaption>Potrero con árboles de sombrío.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/potrero-cerca-480.webp 480w, img/potrero-cerca-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-cerca-900.jpg" srcset="img/potrero-cerca-480.jpg 480w, img/potrero-cerca-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="507" loading="lazy" decoding="async" data-full="img/potrero-cerca-900.jpg" alt="Potrero de pasto parejo cercado en poste y alambre, con monte al fondo"></picture>
+      <figure class="tile h">
+        <picture><source type="image/webp" srcset="img/potrero-cerca-4c74f1-600.webp 600w, img/potrero-cerca-4c74f1-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/potrero-cerca-4c74f1-1100.jpg" srcset="img/potrero-cerca-4c74f1-600.jpg 600w, img/potrero-cerca-4c74f1-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="619" loading="lazy" decoding="async" data-full="img/potrero-cerca-4c74f1-1100.jpg" alt="Potrero de pasto parejo cercado en poste y alambre, con monte al fondo"></picture>
         <figcaption>Potrero parejo, cercado en poste y alambre.</figcaption>
       </figure>
     </div>
@@ -566,17 +591,17 @@ body.has-stick{padding-bottom:72px}
         <p>Cimitarra: unos 27 &deg;C de media y cerca de 2.700 mm de lluvia al año. Datos del municipio, no de la finca.</p>
       </div>
     </div>
-    <div class="gallery">
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/cano-480.webp 480w, img/cano-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/cano-900.jpg" srcset="img/cano-480.jpg 480w, img/cano-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" data-full="img/cano-900.jpg" alt="Caño de agua entre potrero y monte, con cerca de alambre en primer plano"></picture>
+    <div class="show-grid">
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/cano-9013cc-600.webp 600w, img/cano-9013cc-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/cano-9013cc-1100.jpg" srcset="img/cano-9013cc-600.jpg 600w, img/cano-9013cc-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1956" loading="lazy" decoding="async" data-full="img/cano-9013cc-1100.jpg" alt="Caño de agua entre potrero y monte, con cerca de alambre en primer plano"></picture>
         <figcaption>El caño, visto desde el puente.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/puente-480.webp 480w, img/puente-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/puente-900.jpg" srcset="img/puente-480.jpg 480w, img/puente-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" data-full="img/puente-900.jpg" alt="Puente de madera sobre el caño, con tranquera al fondo y empedrado a la entrada"></picture>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/puente-4038e4-600.webp 600w, img/puente-4038e4-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/puente-4038e4-1100.jpg" srcset="img/puente-4038e4-600.jpg 600w, img/puente-4038e4-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1956" loading="lazy" decoding="async" data-full="img/puente-4038e4-1100.jpg" alt="Puente de madera sobre el caño, con tranquera al fondo y empedrado a la entrada"></picture>
         <figcaption>Puente de madera sobre el caño, con tranquera.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/agua-potrero-480.webp 480w, img/agua-potrero-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/agua-potrero-900.jpg" srcset="img/agua-potrero-480.jpg 480w, img/agua-potrero-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" data-full="img/agua-potrero-900.jpg" alt="Agua con buchón a orillas de un potrero cercado en poste y alambre"></picture>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/agua-potrero-c023e9-600.webp 600w, img/agua-potrero-c023e9-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/agua-potrero-c023e9-1100.jpg" srcset="img/agua-potrero-c023e9-600.jpg 600w, img/agua-potrero-c023e9-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1956" loading="lazy" decoding="async" data-full="img/agua-potrero-c023e9-1100.jpg" alt="Agua con buchón a orillas de un potrero cercado en poste y alambre"></picture>
         <figcaption>Agua con buchón a orillas del potrero.</figcaption>
       </figure>
     </div>
@@ -601,6 +626,10 @@ body.has-stick{padding-bottom:72px}
     </div>
   </div>
 </section>
+<figure class="band">
+  <picture><source type="image/webp" srcset="img/banda-lomas-342d28-900.webp 900w, img/banda-lomas-342d28-1600.webp 1600w" sizes="100vw"><img src="img/banda-lomas-342d28-1600.jpg" srcset="img/banda-lomas-342d28-900.jpg 900w, img/banda-lomas-342d28-1600.jpg 1600w" sizes="100vw" width="1600" height="684" loading="lazy" decoding="async" data-full="img/banda-lomas-342d28-1600.jpg" alt="Lomas de pasto y monte bajo cielo azul"></picture>
+  <figcaption class="wrap">Lomas y monte de la finca.</figcaption>
+</figure>
 <section id="acceso" style="background:var(--card);border-block:1px solid var(--line)">
   <div class="wrap stack">
     <div class="stack-sm narrow">
@@ -628,29 +657,33 @@ body.has-stick{padding-bottom:72px}
       <h2>Llanura, sombrío, monte y agua</h2>
       <p class="lede">Fotos tomadas en la finca y sus alrededores en septiembre de 2026, sin retoque.</p>
     </div>
-    <div class="gallery">
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/llanura-alto-480.webp 480w, img/llanura-alto-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/llanura-alto-900.jpg" srcset="img/llanura-alto-480.jpg 480w, img/llanura-alto-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/llanura-alto-900.jpg" alt="Llanura de potreros con árboles dispersos, vista desde un alto, con cordillera al fondo"></picture>
+    <figure class="lead">
+      <picture><source type="image/webp" srcset="img/tierra-carreteable-7b17da-800.webp 800w, img/tierra-carreteable-7b17da-1600.webp 1600w" sizes="(max-width:1100px) 100vw, 1060px"><img src="img/tierra-carreteable-7b17da-1600.jpg" srcset="img/tierra-carreteable-7b17da-800.jpg 800w, img/tierra-carreteable-7b17da-1600.jpg 1600w" sizes="(max-width:1100px) 100vw, 1060px" width="1600" height="900" loading="lazy" decoding="async" data-full="img/tierra-carreteable-7b17da-1600.jpg" alt="Carreteable entre potreros verdes en lo plano, con cercas a los lados"></picture>
+      <figcaption>Carreteable entre potreros, en lo plano.</figcaption>
+    </figure>
+    <div class="show-grid">
+      <figure class="tile h">
+        <picture><source type="image/webp" srcset="img/llanura-alto-25260d-600.webp 600w, img/llanura-alto-25260d-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/llanura-alto-25260d-1100.jpg" srcset="img/llanura-alto-25260d-600.jpg 600w, img/llanura-alto-25260d-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="619" loading="lazy" decoding="async" data-full="img/llanura-alto-25260d-1100.jpg" alt="Llanura de potreros con árboles dispersos, vista desde un alto, con cordillera al fondo"></picture>
         <figcaption>La llanura vista desde un alto, con la cordillera al fondo.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/vista-potreros-480.webp 480w, img/vista-potreros-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/vista-potreros-900.jpg" srcset="img/vista-potreros-480.jpg 480w, img/vista-potreros-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/vista-potreros-900.jpg" alt="Potreros planos rodeados de monte, vistos desde un alto con camino de tierra en primer plano"></picture>
+      <figure class="tile h">
+        <picture><source type="image/webp" srcset="img/vista-potreros-9f92c0-600.webp 600w, img/vista-potreros-9f92c0-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/vista-potreros-9f92c0-1100.jpg" srcset="img/vista-potreros-9f92c0-600.jpg 600w, img/vista-potreros-9f92c0-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="619" loading="lazy" decoding="async" data-full="img/vista-potreros-9f92c0-1100.jpg" alt="Potreros planos rodeados de monte, vistos desde un alto con camino de tierra en primer plano"></picture>
         <figcaption>Potreros planos y monte, vistos desde un alto.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/arbol-sombrio-480.webp 480w, img/arbol-sombrio-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/arbol-sombrio-900.jpg" srcset="img/arbol-sombrio-480.jpg 480w, img/arbol-sombrio-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1600" loading="lazy" decoding="async" data-full="img/arbol-sombrio-900.jpg" alt="Árboles grandes de sombrío en medio de un potrero"></picture>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/arbol-sombrio-b853a1-600.webp 600w, img/arbol-sombrio-b853a1-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/arbol-sombrio-b853a1-1100.jpg" srcset="img/arbol-sombrio-b853a1-600.jpg 600w, img/arbol-sombrio-b853a1-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1956" loading="lazy" decoding="async" data-full="img/arbol-sombrio-b853a1-1100.jpg" alt="Árboles grandes de sombrío en medio de un potrero"></picture>
         <figcaption>Árboles grandes de sombrío en el potrero.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/potrero-monte-480.webp 480w, img/potrero-monte-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/potrero-monte-900.jpg" srcset="img/potrero-monte-480.jpg 480w, img/potrero-monte-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/potrero-monte-900.jpg" alt="Potrero de pasto verde que llega hasta el borde del monte"></picture>
+      <figure class="tile h">
+        <picture><source type="image/webp" srcset="img/potrero-monte-5c3c06-600.webp 600w, img/potrero-monte-5c3c06-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/potrero-monte-5c3c06-1100.jpg" srcset="img/potrero-monte-5c3c06-600.jpg 600w, img/potrero-monte-5c3c06-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="619" loading="lazy" decoding="async" data-full="img/potrero-monte-5c3c06-1100.jpg" alt="Potrero de pasto verde que llega hasta el borde del monte"></picture>
         <figcaption>Potrero contra el monte.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/caballo-480.webp 480w, img/caballo-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/caballo-900.jpg" srcset="img/caballo-480.jpg 480w, img/caballo-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="1603" loading="lazy" decoding="async" data-full="img/caballo-900.jpg" alt="Caballo bayo bajo árboles de sombrío, con rastrojo en primer plano"></picture>
+      <figure class="tile v">
+        <picture><source type="image/webp" srcset="img/caballo-209c01-600.webp 600w, img/caballo-209c01-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/caballo-209c01-1100.jpg" srcset="img/caballo-209c01-600.jpg 600w, img/caballo-209c01-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="1959" loading="lazy" decoding="async" data-full="img/caballo-209c01-1100.jpg" alt="Caballo bayo bajo árboles de sombrío, con rastrojo en primer plano"></picture>
         <figcaption>Caballo bajo el sombrío.</figcaption>
       </figure>
-      <figure class="shot">
-        <picture><source type="image/webp" srcset="img/camino-alto-480.webp 480w, img/camino-alto-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/camino-alto-900.jpg" srcset="img/camino-alto-480.jpg 480w, img/camino-alto-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="506" loading="lazy" decoding="async" data-full="img/camino-alto-900.jpg" alt="Camino empedrado que sube entre monte y cerca de alambre"></picture>
+      <figure class="tile h">
+        <picture><source type="image/webp" srcset="img/camino-alto-bcd77d-600.webp 600w, img/camino-alto-bcd77d-1100.webp 1100w" sizes="(max-width:760px) 90vw, 530px"><img src="img/camino-alto-bcd77d-1100.jpg" srcset="img/camino-alto-bcd77d-600.jpg 600w, img/camino-alto-bcd77d-1100.jpg 1100w" sizes="(max-width:760px) 90vw, 530px" width="1100" height="619" loading="lazy" decoding="async" data-full="img/camino-alto-bcd77d-1100.jpg" alt="Camino empedrado que sube entre monte y cerca de alambre"></picture>
         <figcaption>Camino empedrado que sube al alto.</figcaption>
       </figure>
     </div>
