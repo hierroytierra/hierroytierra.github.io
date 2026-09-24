@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Dos lotes contiguos de 7.222 m² y 18.623 m² en Cabeceras de Llanogrande, Rionegro. Desde $1.805 millones; los dos por $5.250 millones.">
+<meta name="description" content="Dos lotes contiguos de 7.222 m² y 18.623 m² en Llanogrande, Rionegro. Desde $1.805 millones; los dos por $5.250 millones.">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CO">
-<meta property="og:title" content="Dos lotes en Cabeceras de Llanogrande · 25.845 m²">
+<meta property="og:title" content="Dos lotes en Llanogrande · 25.845 m²">
 <meta property="og:description" content="Lote 14: 7.222 m² por $1.805 M. Lote 13: 18.623 m² por $3.724 M. Los dos: $5.250 M. Rionegro, Antioquia.">
 <meta property="og:image" content="https://hierroytierra.github.io/lotes/llanogrande/img/og-cover.jpg">
 <meta property="og:image:width" content="1200">
@@ -17,8 +17,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="64x64" href="img/ht-logo-64.png">
 <link rel="apple-touch-icon" sizes="180x180" href="img/ht-logo-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1E3A2F">
 <meta property="og:site_name" content="Hierro & Tierra · Trading & Activos Rurales">
-<title>Lotes 13 y 14 · Cabeceras de Llanogrande, Rionegro · Hierro &amp; Tierra</title>
+<title>Lotes 13 y 14 · Llanogrande, Rionegro · Hierro &amp; Tierra</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Montserrat:wght@400;500;600&display=swap">
@@ -318,6 +320,7 @@ section{padding-block:clamp(52px,7vw,88px)}
   --pasto-soft:#E6EBE4;
   --oxido:#8C4327;          /* óxido / tierra */
   --oro:#C5A059;            /* oro viejo */
+  --acento:#8C4327;         /* dato sobre fondo claro: oxido (6,5:1 sobre arena) */
   --corteza:#C5A059;
   --shadow:0 1px 2px rgba(32,36,34,.05), 0 8px 28px -18px rgba(32,36,34,.35);
   --deep:#1E3A2F;           /* bloques oscuros: verde bosque */
@@ -333,7 +336,7 @@ section{padding-block:clamp(52px,7vw,88px)}
     --paper:#202422; --card:#2A2F2C; --raise:#323734;
     --ink:#F7F4EE; --ink-2:#D9D3C6; --muted:#A6A9A2;
     --line:#3E443F; --line-soft:#353A37;
-    --pasto:#C5A059; --pasto-soft:#2E3A33;
+    --pasto:#C5A059; --pasto-soft:#2E3A33; --acento:#C5A059;
     --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.9);
   }
 }
@@ -341,13 +344,13 @@ section{padding-block:clamp(52px,7vw,88px)}
   --paper:#202422; --card:#2A2F2C; --raise:#323734;
   --ink:#F7F4EE; --ink-2:#D9D3C6; --muted:#A6A9A2;
   --line:#3E443F; --line-soft:#353A37;
-  --pasto:#C5A059; --pasto-soft:#2E3A33;
+  --pasto:#C5A059; --pasto-soft:#2E3A33; --acento:#C5A059;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.9);
 }
 
 /* tipografía de marca */
 body{font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-size:15.5px}
-h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card-facts b{font-family:"Playfair Display",Georgia,serif}
+h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2{font-family:"Playfair Display",Georgia,serif}
 .eyebrow,.parcel-tag,.plan-panel h3,.row dt,.card-tag,.axis,.step i{font-family:"Montserrat",sans-serif}
 .plan svg text{font-family:"Montserrat",sans-serif}
 .plan svg .s-big{font-family:"Playfair Display",Georgia,serif}
@@ -362,10 +365,10 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 .brand-bar img{width:44px;height:44px;flex:0 0 auto}
 .brand-bar a{display:flex;align-items:center;gap:14px;text-decoration:none;color:#F7F4EE}
 .brand-name{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
-.brand-sub{font-family:"Montserrat",sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oro);margin-top:3px}
-.brand-bar .brand-right{margin-left:auto;font-family:"Montserrat",sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--oro,#C5A059);text-decoration:none;border:1px solid rgba(197,160,89,.55);padding:8px 12px;border-radius:2px;white-space:nowrap}
+.brand-sub{font-family:"Montserrat",sans-serif;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:var(--oro);margin-top:3px}
+.brand-bar .brand-right{margin-left:auto;font-family:"Montserrat",sans-serif;font-size:.8125rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--oro,#C5A059);text-decoration:none;border:1px solid rgba(197,160,89,.55);padding:8px 12px;border-radius:2px;white-space:nowrap}
 .brand-bar .brand-right:hover{background:rgba(197,160,89,.12)}
-@media (max-width:620px){.brand-bar .brand-right{font-size:.6rem;letter-spacing:.08em;padding:7px 9px}.brand-bar img{width:38px;height:38px}.brand-name{font-size:.95rem}}
+@media (max-width:620px){.brand-bar .brand-right{font-size:.8125rem;letter-spacing:.04em;padding:7px 9px}.brand-bar img{width:38px;height:38px}.brand-name{font-size:.95rem}}
 @media (max-width:440px){.brand-bar .brand-sub{display:none!important}.brand-bar .brand-name{white-space:nowrap;font-size:.9rem}.brand-bar .wrap{gap:10px}}
 
 /* pie de marca */
@@ -374,7 +377,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 .brand-foot img{width:84px;height:84px}
 .brand-foot .brand-name{color:#F7F4EE;font-size:1.25rem}
 .brand-foot .brand-tagline{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:1.05rem;color:#F7F4EE;margin-top:10px}
-.brand-foot .brand-meta{font-family:"Montserrat",sans-serif;font-size:.74rem;letter-spacing:.06em;color:#A9B3AB;line-height:1.7;text-align:right}
+.brand-foot .brand-meta{font-family:"Montserrat",sans-serif;font-size:.8125rem;letter-spacing:.06em;color:#A9B3AB;line-height:1.7;text-align:right}
 .brand-foot a{color:var(--oro);text-decoration:none}
 @media (max-width:760px){.brand-foot .wrap{grid-template-columns:auto 1fr}.brand-foot .brand-meta{grid-column:1/-1;text-align:left}}
 
@@ -384,6 +387,8 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 @media (max-width:620px){.hero img.hero-seal{width:48px;height:48px;right:14px;top:14px}}
 @media print{.brand-bar,.brand-foot{background:#202422 !important}}
 
+.brand-right .short{display:none}
+@media (max-width:440px){.brand-right .full{display:none}.brand-right .short{display:inline}}
 
 /* ---- portada legible ---- */
 .hero-veil{background:linear-gradient(180deg,rgba(14,20,17,.10) 0%,rgba(14,20,17,.34) 32%,rgba(14,20,17,.82) 62%,rgba(14,20,17,.94) 100%)}
@@ -392,6 +397,7 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 .hero img.hero-seal{display:none}
 .hero-photos{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(247,244,238,.12);color:var(--on-deep);border:1px solid rgba(247,244,238,.45);border-radius:2px;padding:9px 14px;font:600 .82rem/1 var(--font-sans,"Montserrat",sans-serif);letter-spacing:.04em;cursor:pointer}
 .hero-photos:hover{background:rgba(247,244,238,.2)}
+.hero-photos[hidden]{display:none!important}
 @media (max-width:719px){
   .hero{display:block;min-height:0;position:relative}
   .hero picture{display:block}
@@ -430,9 +436,9 @@ h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card
 .stick{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#202422;border-top:2px solid var(--oro,#C5A059);transform:translateY(110%);transition:transform .25s ease;padding-bottom:env(safe-area-inset-bottom,0px)}
 .stick.on{transform:none}
 .stick .wrap{display:flex;align-items:center;gap:14px;padding-block:10px}
-.stick .p{font-family:"Playfair Display",Georgia,serif;font-weight:600;color:#F7F4EE;font-size:1.08rem;line-height:1.15;font-variant-numeric:tabular-nums}
-.stick .l{display:block;font:500 .74rem/1.3 "Montserrat",sans-serif;color:#A9B3AB;letter-spacing:.03em}
-.stick .who{font:500 .78rem/1.3 "Montserrat",sans-serif;color:#A9B3AB;margin-left:auto}
+.stick .p{font-family:"Montserrat",Arial,sans-serif;font-weight:600;color:#F7F4EE;font-size:1.05rem;line-height:1.15;font-variant-numeric:tabular-nums}
+.stick .l{display:block;font:500 .8125rem/1.3 "Montserrat",sans-serif;color:#A9B3AB;letter-spacing:.03em}
+.stick .who{font:500 .8125rem/1.3 "Montserrat",sans-serif;color:#A9B3AB;margin-left:auto}
 .stick .go{margin-left:auto;background:var(--oro,#C5A059);color:#202422;text-decoration:none;font:600 .92rem/1 "Montserrat",sans-serif;padding:14px 18px;border-radius:2px;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
 .stick .who+.go{margin-left:0}
 @media (max-width:719px){.stick .who{display:none}}
@@ -442,14 +448,14 @@ body.has-stick{padding-bottom:72px}
 
 </style>
 </head>
-<body data-code="[HT-LLG]" data-wa="573004903639" data-finca="los lotes de Cabeceras de Llanogrande">
+<body data-code="[HT-LLG]" data-wa="573004903639" data-finca="los lotes de Llanogrande">
 <header class="brand-bar">
   <div class="wrap">
     <a href="../../" aria-label="Hierro &amp; Tierra, portafolio">
       <img src="img/ht-logo-256.png" width="44" height="44" alt="Monograma H&amp;T de Hierro &amp; Tierra">
       <span><span class="brand-name">Hierro &amp; Tierra</span><span class="brand-sub" style="display:block">Trading &amp; Activos Rurales</span></span>
     </a>
-    <a class="brand-right" href="../../vender/">Vender mi finca</a>
+    <a class="brand-right" href="../../vender/"><span class="full">Vender mi finca</span><span class="short">Vender</span></a>
   </div>
 </header>
 <!-- ═══════════════ PORTADA ═══════════════ -->
@@ -459,10 +465,10 @@ body.has-stick{padding-bottom:72px}
   <div class="hero-veil"></div>
   <div class="hero-body">
     <div class="wrap">
-      <p class="eyebrow">Vereda Cabeceras &middot; Rionegro, Antioquia</p>
-      <h1>Dos lotes en Cabeceras de Llanogrande</h1>
-      <p class="hero-sub">Dos lotes contiguos con matrícula propia: 7.222 m² por $1.805 millones y 18.623 m² por $3.724 millones. A 4 km del Mall Llanogrande, en la misma vereda del Colegio Montessori.</p>
-      <button class="hero-photos" type="button">Ver fotos</button>
+      <p class="eyebrow">Llanogrande &middot; Rionegro, Antioquia</p>
+      <h1>Dos lotes en Llanogrande</h1>
+      <p class="hero-sub">Dos lotes contiguos con matrícula propia: 7.222 m² por $1.805 millones y 18.623 m² por $3.724 millones. A 4 km del Mall Llanogrande.</p>
+      <button class="hero-photos" type="button" hidden>Ver fotos</button>
     </div>
   </div>
 </header>
@@ -497,7 +503,7 @@ body.has-stick{padding-bottom:72px}
         <div class="price">
           <b class="num">$1.805.500.000</b>
           <span class="num">$250.000 por m&sup2;</span>
-          <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesa%20el%20lote%2014%20%287.222%20m%C2%B2%29%20en%20Cabeceras%20de%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F%20%5BHT-LLG%5D" target="_blank" rel="noopener">Preguntar por el lote 14 &rarr;</a>
+          <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesa%20el%20lote%2014%20%287.222%20m%C2%B2%29%20en%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F%20%5BHT-LLG%5D" target="_blank" rel="noopener">Preguntar por el lote 14 &rarr;</a>
         </div>
       </article>
 
@@ -512,7 +518,7 @@ body.has-stick{padding-bottom:72px}
         <div class="price">
           <b class="num">$3.724.600.000</b>
           <span class="num">$200.000 por m&sup2;</span>
-          <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesa%20el%20lote%2013%20%2818.623%20m%C2%B2%29%20en%20Cabeceras%20de%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F%20%5BHT-LLG%5D" target="_blank" rel="noopener">Preguntar por el lote 13 &rarr;</a>
+          <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesa%20el%20lote%2013%20%2818.623%20m%C2%B2%29%20en%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F%20%5BHT-LLG%5D" target="_blank" rel="noopener">Preguntar por el lote 13 &rarr;</a>
         </div>
       </article>
     </div>
@@ -521,7 +527,7 @@ body.has-stick{padding-bottom:72px}
       <div class="stack-sm t-left" style="gap:6px">
         <h3>Los dos juntos &mdash; 25.845 m&sup2;</h3>
         <p class="small" style="color:var(--ink-2)">Un solo cuerpo de tierra continuo, un solo propietario y una sola negociación. Tamaño para hasta cuatro casas, según norma.</p>
-        <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesan%20los%20dos%20lotes%20%2825.845%20m%C2%B2%29%20en%20Cabeceras%20de%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F%20%5BHT-LLG%5D" target="_blank" rel="noopener">Preguntar por los dos lotes &rarr;</a>
+        <a class="parcel-link" href="https://wa.me/573004903639?text=Hola%2C%20me%20interesan%20los%20dos%20lotes%20%2825.845%20m%C2%B2%29%20en%20Llanogrande.%20%C2%BFPodemos%20coordinar%20una%20visita%3F%20%5BHT-LLG%5D" target="_blank" rel="noopener">Preguntar por los dos lotes &rarr;</a>
       </div>
       <div class="t-right">
         <p class="t-price num">$5.250.000.000</p>
@@ -534,33 +540,14 @@ body.has-stick{padding-bottom:72px}
      <div class="plan-grid">
 
       <div class="plan-panel">
-        <h3>D&oacute;nde est&aacute;n</h3>
-        <svg viewBox="0 0 640 330" role="img" aria-label="El lote 13, de 18.623 metros cuadrados, colinda por el oriente con el lote 14, de 7.222 metros cuadrados. Una quebrada corre por el costado norte y el Colegio Montessori queda hacia el oriente.">
-          <path d="M 22 58 C 110 26 196 50 278 34 C 356 19 432 42 512 26 C 560 17 596 26 622 20"
-                fill="none" stroke="var(--pizarra)" stroke-width="2.2" stroke-linecap="round" opacity=".8"/>
-          <text class="s-lbl" x="24" y="16" fill="var(--pizarra)" font-family="Archivo, sans-serif" letter-spacing="1.4">QUEBRADA</text>
-
-          <polygon points="42,150 104,66 268,98 316,204 226,272 96,246"
-                   fill="var(--pasto-soft)" stroke="var(--pasto)" stroke-width="2.5" stroke-linejoin="round"/>
-          <text class="s-big" x="120" y="166" fill="var(--ink)" font-family="Spectral, Georgia, serif" font-weight="600">Lote 13</text>
-          <text class="s-lbl" x="120" y="189" fill="var(--ink-2)" font-family="Archivo, sans-serif">18.623 m&#178;</text>
-
-          <polygon points="316,204 268,98 358,64 424,120 412,192 356,244"
-                   fill="var(--pasto-soft)" stroke="var(--pasto)" stroke-width="2.5" stroke-linejoin="round"/>
-          <text class="s-big" x="304" y="146" fill="var(--ink)" font-family="Spectral, Georgia, serif" font-weight="600">Lote 14</text>
-          <text class="s-lbl" x="304" y="167" fill="var(--ink-2)" font-family="Archivo, sans-serif">7.222 m&#178;</text>
-
-          <line x1="452" y1="152" x2="556" y2="152" stroke="var(--corteza)" stroke-width="1.8" stroke-dasharray="5 5"/>
-          <polygon points="558,152 547,146 547,158" fill="var(--corteza)"/>
-          <text class="s-lbl" x="438" y="132" fill="var(--muted)" font-family="Archivo, sans-serif">Colegio Montessori</text>
-          <text class="s-lbl" x="438" y="180" fill="var(--muted)" font-family="Archivo, sans-serif">Mall Llanogrande</text>
-          <text class="s-lbl" x="438" y="206" fill="var(--muted)" font-family="Archivo, sans-serif">a 4 km</text>
-
-          <g transform="translate(604,246)">
-            <line x1="0" y1="26" x2="0" y2="2" stroke="var(--ink-2)" stroke-width="1.8"/>
-            <polygon points="0,0 -5,10 5,10" fill="var(--ink-2)"/>
-            <text class="s-lbl" x="0" y="44" fill="var(--muted)" font-family="Archivo, sans-serif" text-anchor="middle">N</text>
-          </g>
+        <h3>Los dos lotes</h3>
+        <svg viewBox="0 0 640 330" role="img" aria-label="El lote 13, de 18.623 metros cuadrados, y el lote 14, de 7.222 metros cuadrados, son contiguos. Esquema de áreas, sin forma real del predio.">
+          <rect x="40" y="60" width="330" height="210" rx="6" fill="var(--pasto-soft)" stroke="var(--pasto)" stroke-width="2.5"/>
+          <rect x="400" y="95" width="195" height="175" rx="6" fill="var(--pasto-soft)" stroke="var(--pasto)" stroke-width="2.5"/>
+          <text class="s-big" x="205" y="158" fill="var(--ink)" font-family="Spectral, Georgia, serif" font-weight="600" text-anchor="middle">Lote 13</text>
+          <text class="s-lbl" x="205" y="182" fill="var(--ink-2)" font-family="Montserrat, sans-serif" text-anchor="middle">18.623 m&#178;</text>
+          <text class="s-big" x="497" y="176" fill="var(--ink)" font-family="Spectral, Georgia, serif" font-weight="600" text-anchor="middle">Lote 14</text>
+          <text class="s-lbl" x="497" y="200" fill="var(--ink-2)" font-family="Montserrat, sans-serif" text-anchor="middle">7.222 m&#178;</text>
         </svg>
       </div>
 
@@ -572,28 +559,23 @@ body.has-stick{padding-bottom:72px}
             <rect x="5" y="12" width="22" height="14" rx="1.5" fill="var(--pasto)"/>
           </symbol>
 
-          <polygon points="42,150 104,66 268,98 316,204 226,272 96,246"
-                   fill="var(--pasto-soft)" stroke="var(--pasto)" stroke-width="2.2" stroke-linejoin="round" opacity=".95"/>
-          <polygon points="316,204 268,98 358,64 424,120 412,192 356,244"
-                   fill="var(--pasto-soft)" stroke="var(--pasto)" stroke-width="2.2" stroke-linejoin="round" opacity=".95"/>
+          <rect x="40" y="60" width="330" height="210" rx="6" fill="var(--pasto-soft)" stroke="var(--pasto)" stroke-width="2.2" opacity=".95"/>
+          <rect x="400" y="95" width="195" height="175" rx="6" fill="var(--pasto-soft)" stroke="var(--pasto)" stroke-width="2.2" opacity=".95"/>
 
-          <use href="#casa" x="82" y="146" width="46" height="40"/>
-          <use href="#casa" x="158" y="112" width="46" height="40"/>
-          <use href="#casa" x="196" y="196" width="46" height="40"/>
-          <use href="#casa" x="330" y="126" width="46" height="40"/>
+          <use href="#casa" x="95" y="190" width="46" height="40"/>
+          <use href="#casa" x="180" y="130" width="46" height="40"/>
+          <use href="#casa" x="270" y="190" width="46" height="40"/>
+          <use href="#casa" x="472" y="155" width="46" height="40"/>
 
-          <text class="s-lbl" x="60" y="302" fill="var(--muted)" font-family="Archivo, sans-serif" letter-spacing="1.2">LOTE 13</text>
-          <text class="s-big" x="60" y="324" fill="var(--ink)" font-family="Spectral, Georgia, serif" font-weight="600">3 casas</text>
-          <text class="s-lbl" x="338" y="282" fill="var(--muted)" font-family="Archivo, sans-serif" letter-spacing="1.2">LOTE 14</text>
-          <text class="s-big" x="338" y="304" fill="var(--ink)" font-family="Spectral, Georgia, serif" font-weight="600">1 casa</text>
-
-          <text class="s-lbl" x="450" y="150" fill="var(--ink-2)" font-family="Archivo, sans-serif">Capacidad según</text>
-          <text class="s-lbl" x="450" y="176" fill="var(--ink-2)" font-family="Archivo, sans-serif">norma de cada lote</text>
+          <text class="s-lbl" x="60" y="290" fill="var(--muted)" font-family="Montserrat, sans-serif" letter-spacing="1.2">LOTE 13</text>
+          <text class="s-big" x="60" y="312" fill="var(--ink)" font-family="Spectral, Georgia, serif" font-weight="600">3 casas</text>
+          <text class="s-lbl" x="420" y="290" fill="var(--muted)" font-family="Montserrat, sans-serif" letter-spacing="1.2">LOTE 14</text>
+          <text class="s-big" x="420" y="312" fill="var(--ink)" font-family="Spectral, Georgia, serif" font-weight="600">1 casa</text>
         </svg>
       </div>
 
      </div>
-      <p class="small" style="margin-top:10px">Esquema de localizaci&oacute;n y capacidad. La posici&oacute;n de las casas es ilustrativa; los linderos exactos se recorren en la visita.</p>
+      <p class="small" style="margin-top:10px">Esquema de &aacute;reas y capacidad, sin forma real del predio. La posici&oacute;n de las casas es ilustrativa; los linderos exactos se recorren en la visita.</p>
     </div>
   </div>
 </section>
@@ -604,27 +586,17 @@ body.has-stick{padding-bottom:72px}
     <div class="stack-sm narrow">
       <p class="eyebrow">El entorno</p>
       <h2>Colegio, mall, hospital y aeropuerto a menos de 20 minutos. El Poblado, a 44.</h2>
-      <p class="lede">Cabeceras de Llanogrande no es campo lejano: es el centro del altiplano del Oriente antioque&ntilde;o, con el colegio, el mall, el hospital y el aeropuerto en el mismo radio.</p>
+      <p class="lede">Llanogrande no es campo lejano: es el centro del altiplano del Oriente antioque&ntilde;o, con el colegio, el mall, el hospital y el aeropuerto en el mismo radio.</p>
     </div>
 
     <div class="ladder">
       <div class="axis"><span>0</span><span>15 min</span><span>30 min</span><span>45 min</span></div>
 
-      <div class="rung"><p class="rung-name"><b>Colegio Montessori</b>, sede Oriente &mdash; la misma vereda</p><p class="rung-min num"><b>2</b> min</p><div class="rung-bar"><i style="width:4.4%"></i></div></div>
-
       <div class="rung"><p class="rung-name"><b>Mall Llanogrande</b> &mdash; 4,1 km</p><p class="rung-min num"><b>8</b> min</p><div class="rung-bar"><i style="width:17.8%"></i></div></div>
-
-      <div class="rung"><p class="rung-name"><b>Complex Llanogrande</b> y Carulla &mdash; 4,5 km</p><p class="rung-min num"><b>9</b> min</p><div class="rung-bar"><i style="width:20%"></i></div></div>
-
-      <div class="rung"><p class="rung-name"><b>EAFIT Llanogrande</b>, Cosmo Schools y Colegio Jorge Robledo, vía Don Diego</p><p class="rung-min num"><b>12</b> min</p><div class="rung-bar"><i style="width:26.7%"></i></div></div>
-
-      <div class="rung"><p class="rung-name"><b>Hospital San Vicente Fundación</b>, alta complejidad &mdash; 8,3 km</p><p class="rung-min num"><b>15</b> min</p><div class="rung-bar"><i style="width:33.3%"></i></div></div>
 
       <div class="rung"><p class="rung-name"><b>Centro de Rionegro</b> &mdash; 10,6 km</p><p class="rung-min num"><b>18</b> min</p><div class="rung-bar"><i style="width:40%"></i></div></div>
 
       <div class="rung"><p class="rung-name"><b>Aeropuerto Jos&eacute; Mar&iacute;a C&oacute;rdova</b> &mdash; 11,2 km</p><p class="rung-min num"><b>19</b> min</p><div class="rung-bar"><i style="width:42.2%"></i></div></div>
-
-      <div class="rung"><p class="rung-name"><b>El Retiro</b> &mdash; 15,5 km</p><p class="rung-min num"><b>25</b> min</p><div class="rung-bar"><i style="width:55.6%"></i></div></div>
 
       <div class="rung"><p class="rung-name"><b>Medell&iacute;n, El Poblado</b> por el T&uacute;nel de Oriente &mdash; 31 km</p><p class="rung-min num"><b>44</b> min</p><div class="rung-bar"><i style="width:97.8%"></i></div></div>
     </div>
@@ -648,7 +620,7 @@ body.has-stick{padding-bottom:72px}
         <figcaption>Pradera abierta, &aacute;rboles de corteza clara en el lindero y las monta&ntilde;as del altiplano al fondo.</figcaption>
       </figure>
       <figure class="shot">
-        <picture><source type="image/webp" srcset="img/foto3-480.webp 480w, img/foto3-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/foto3-900.jpg" srcset="img/foto3-480.jpg 480w, img/foto3-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="768" loading="lazy" decoding="async" data-full="img/foto3-900.jpg" alt="Potrero con una colina al fondo coronada de palmas y casas campestres"></picture>
+        <picture><source type="image/webp" srcset="img/foto3-480.webp 480w, img/foto3-900.webp 900w" sizes="(max-width:860px) 100vw, 33vw"><img src="img/foto3-900.jpg" srcset="img/foto3-480.jpg 480w, img/foto3-900.jpg 900w" sizes="(max-width:860px) 100vw, 33vw" width="900" height="681" loading="lazy" decoding="async" data-full="img/foto3-900.jpg" alt="Potrero con una colina al fondo coronada de palmas y casas campestres"></picture>
         <figcaption>La colina vecina, coronada de palmas y casas campestres. Es el est&aacute;ndar del sector.</figcaption>
       </figure>
       <figure class="shot">
@@ -683,7 +655,7 @@ body.has-stick{padding-bottom:72px}
       </div>
       <div class="reason">
         <h3>Un mercado que crece, con cifras</h3>
-        <p>El Oriente concentra el 17,4&nbsp;% del mercado inmobiliario de Antioquia y vendi&oacute; 3.668 viviendas nuevas en 2025, un 21&nbsp;% m&aacute;s que el a&ntilde;o anterior. La Lonja de Propiedad Ra&iacute;z sit&uacute;a a Cabeceras entre el suelo rural m&aacute;s valioso del departamento.</p>
+        <p>El Oriente concentra el 17,4&nbsp;% del mercado inmobiliario de Antioquia y vendi&oacute; 3.668 viviendas nuevas en 2025, un 21&nbsp;% m&aacute;s que el a&ntilde;o anterior. La Lonja de Propiedad Ra&iacute;z sit&uacute;a a Llanogrande entre el suelo rural m&aacute;s valioso del departamento.</p>
       </div>
     </div>
   </div>
@@ -697,14 +669,14 @@ body.has-stick{padding-bottom:72px}
       <h2>Los datos, sin adornos</h2>
     </div>
     <dl class="sheet" style="margin:0">
-      <div class="row"><dt>Ubicaci&oacute;n</dt><dd>Vereda Cabeceras de Llanogrande, municipio de Rionegro, Antioquia</dd></div>
+      <div class="row"><dt>Ubicaci&oacute;n</dt><dd>Llanogrande, municipio de Rionegro, Antioquia; la vereda se confirma en la visita.</dd></div>
       <div class="row"><dt>&Aacute;reas</dt><dd class="num">Lote 14: 7.222 m&sup2; &nbsp;&middot;&nbsp; Lote 13: 18.623 m&sup2; &nbsp;&middot;&nbsp; Conjunto: 25.845 m&sup2; (2,58 hect&aacute;reas)</dd></div>
       <div class="row"><dt>Matr&iacute;culas</dt><dd>Independientes para cada lote. Se venden por separado o en conjunto, en venta directa &mdash; no en porcentajes ni proindiviso.</dd></div>
       <div class="row"><dt>Uso y capacidad</dt><dd>Vivienda campestre. Lote 14: una casa. Lote 13: tamaño para hasta tres casas; la capacidad final y la subdivisión se confirman con el concepto de norma de Planeación de Rionegro.</dd></div>
       <div class="row"><dt>Quebrada</dt><dd>Corre por el costado norte. Su franja de retiro ambiental se precisa en el levantamiento topográfico.</dd></div>
       <div class="row"><dt>Topograf&iacute;a</dt><dd>Pendiente suave a plana, empradizada, apta para construir. Arbolado alto consolidado en los linderos.</dd></div>
       <div class="row"><dt>Altura y clima</dt><dd class="num">2.125 metros sobre el nivel del mar. Media anual de 16 &deg;C, rango diario de 13 a 22 &deg;C, sin estaciones.</dd></div>
-      <div class="row"><dt>Servicios</dt><dd>Energía de EPM y acueducto veredal de Cabeceras de Llanogrande en la zona. Acometidas y disponibilidad se confirman en la visita.</dd></div>
+      <div class="row"><dt>Servicios</dt><dd>Energía de EPM y acueducto veredal de la zona. Acometidas y disponibilidad se confirman en la visita.</dd></div>
       <div class="row"><dt>Para quien desarrolle</dt><dd>En abril de 2026 el Tribunal Administrativo de Antioquia confirmó la nulidad de las cesiones urbanísticas obligatorias del POT de Rionegro en suelo rural y suburbano. Un costo menos en cesión de suelo; su abogado le dirá cómo aplica a su proyecto.</dd></div>
       <div class="row"><dt>Precio</dt><dd class="num">Lote 14: $1.805.500.000 &nbsp;&middot;&nbsp; Lote 13: $3.724.600.000 &nbsp;&middot;&nbsp; Los dos: $5.250.000.000</dd></div>
     </dl>
@@ -719,7 +691,7 @@ body.has-stick{padding-bottom:72px}
       <h2>Le recorremos el lote cuando quiera</h2>
       <p class="lede">La visita toma una ma&ntilde;ana. Vamos con los linderos, el plano y los documentos en mano, y desde el lote se ven el arbolado, los vecinos y la v&iacute;a de acceso.</p>
       <div class="cta">
-        <a class="btn btn-main" href="https://wa.me/573004903639?text=Hola%2C%20vi%20la%20informaci%C3%B3n%20de%20los%20lotes%20en%20Cabeceras%20de%20Llanogrande%20y%20quiero%20agendar%20una%20visita.%20%5BHT-LLG%5D" target="_blank" rel="noopener">Agendar visita por WhatsApp</a>
+        <a class="btn btn-main" href="https://wa.me/573004903639?text=Hola%2C%20vi%20la%20informaci%C3%B3n%20de%20los%20lotes%20en%20Llanogrande%20y%20quiero%20agendar%20una%20visita.%20%5BHT-LLG%5D" target="_blank" rel="noopener">Agendar visita por WhatsApp</a>
       </div>
       <p class="small" style="margin-top:4px">+57 300 490 3639 &nbsp;·&nbsp; Le atiende un asesor de <b style="color:var(--on-deep)">Hierro &amp; Tierra</b>, con mandato del propietario.</p>
     </div>
@@ -744,7 +716,7 @@ body.has-stick{padding-bottom:72px}
 
     <div class="narrow stack-sm" style="gap:16px">
       <p class="small">
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Cabeceras+de+Llanogrande%2C+Rionegro%2C+Antioquia" target="_blank" rel="noopener">Ver el sector en Google Maps &rarr;</a> &nbsp;·&nbsp; Ubicación exacta y polígono: se los enviamos por WhatsApp.
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Llanogrande%2C+Rionegro%2C+Antioquia" target="_blank" rel="noopener">Ver el sector en Google Maps &rarr;</a> &nbsp;·&nbsp; Ubicación exacta y polígono: se los enviamos por WhatsApp.
       </p>
       <p class="footnote" style="margin-top:0">Precios en pesos colombianos. Las áreas corresponden al plano del predio y se verifican en el levantamiento topográfico; la capacidad de casas, con la norma de Planeación.</p>
     </div>
@@ -758,14 +730,14 @@ body.has-stick{padding-bottom:72px}
       <span class="brand-sub" style="display:block">Trading &amp; Activos Rurales</span>
       <p class="brand-tagline">M&aacute;s que tierra, legado.</p>
     </div>
-    <p class="brand-meta">Le atiende un asesor de Hierro &amp; Tierra<br><a href="https://wa.me/573004903639">WhatsApp +57 300 490 3639</a><br><a href="../../">Ver todas las fincas</a><br><a href="../../datos/">Tratamiento de datos</a></p>
+    <p class="brand-meta">Le atiende un asesor de Hierro &amp; Tierra<br><a href="https://wa.me/573004903639">WhatsApp +57 300 490 3639</a><br><a href="../../">Ver todas las fincas</a> &middot; <a href="../../como-trabajamos/">C&oacute;mo trabajamos</a><br>Sus datos se usan solo para atenderlo. <a href="../../datos/">Tratamiento de datos</a> (Ley 1581 de 2012)</p>
   </div>
 </footer>
 <div class="stick" aria-label="Contacto rápido">
   <div class="wrap">
     <div><span class="p">Desde $1.805 M</span><span class="l">Lotes en Llanogrande · Rionegro</span></div>
     <span class="who">Le atiende un asesor de Hierro &amp; Tierra</span>
-    <a class="go" href="https://wa.me/573004903639?text=Hola%2C%20vi%20los%20lotes%20de%20Cabeceras%20de%20Llanogrande%20y%20quiero%20cuadrar%20una%20visita.%20%5BHT-LLG%5D" target="_blank" rel="noopener">Cuadrar visita</a>
+    <a class="go" href="https://wa.me/573004903639?text=Hola%2C%20vi%20los%20lotes%20de%20Llanogrande%20y%20quiero%20cuadrar%20una%20visita.%20%5BHT-LLG%5D" target="_blank" rel="noopener" data-umami-event="wa-click" data-umami-event-finca="" data-umami-event-pos="sticky">Cuadrar visita</a>
   </div>
 </div>
 <dialog class="lb" aria-label="Fotos">
@@ -791,11 +763,11 @@ body.has-stick{padding-bottom:72px}
   var imgs=[].slice.call(d.querySelectorAll('.hero picture img, .hero>img:not(.hero-seal), figure img'));
   var items=imgs.map(function(im){var f=im.closest('figure');var cap=f&&f.querySelector('figcaption');
     return {src:im.getAttribute('data-full')||im.currentSrc||im.src, alt:im.alt||'', cap:cap?cap.textContent.trim():(im.alt||'')};});
-  var btn=d.querySelector('.hero-photos'); if(btn){ if(items.length>1){btn.textContent='Ver las '+items.length+' fotos';} else {btn.hidden=true;} }
+  var btn=d.querySelector('.hero-photos'); if(btn){ if(items.length>1){btn.textContent='Ver las '+items.length+' fotos';btn.hidden=false;} else {btn.hidden=true;} }
   var lb=d.querySelector('.lb'); if(!lb||!items.length||typeof lb.showModal!=='function') return;
   var li=lb.querySelector('img'), lc=lb.querySelector('.lb-cap'), ln=lb.querySelector('.lb-n'), la=lb.querySelector('.lb-ask'), i=0;
   function show(k){i=(k+items.length)%items.length;var it=items[i];li.src=it.src;li.alt=it.alt;lc.textContent=it.cap;ln.textContent=(i+1)+' / '+items.length;
-    if(la&&wa){la.href='https://wa.me/'+wa+'?text='+encodeURIComponent('Hola, vi la foto "'+it.cap+'" de '+finca+'. Quiero preguntar por esto. '+code);}}
+    if(la&&wa){la.href='https://wa.me/'+wa+'?text='+encodeURIComponent('Hola, vi la foto "'+it.cap+'" de '+finca+'. Quiero preguntar por esto. '+code);la.setAttribute('data-umami-event','wa-click');la.setAttribute('data-umami-event-finca',code);la.setAttribute('data-umami-event-pos','visor');}}
   function open(k){show(k);lb.showModal();}
   imgs.forEach(function(im,k){ if(im.closest('.hero')) return; im.addEventListener('click',function(){open(k);}); });
   if(btn) btn.addEventListener('click',function(){open(0);});
