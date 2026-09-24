@@ -705,3 +705,6 @@ body.has-stick{padding-bottom:72px}
 /* ---- como trabajamos ---- */
 .pasos.tres{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:860px){.pasos.tres{grid-template-columns:1fr}}
+
+/* ---- tarjetas impares: la ultima ocupa todo el ancho (sin cuadro vacio) ---- */
+.reasons>.reason:last-child:nth-child(odd){grid-column:1/-1}
